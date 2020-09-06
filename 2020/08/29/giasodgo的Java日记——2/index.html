@@ -6,14 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://example.com">
-  <title>Archives: 2020 | giasodgo的博客</title>
+  <title>giasodgo的Java日记——2 | giasodgo的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="giasodgo的博客">
-<meta property="og:url" content="http://example.com/archives/2020/index.html">
+  <meta name="description" content="第二章 java 基本程序设计结构（一）">
+<meta property="og:type" content="article">
+<meta property="og:title" content="giasodgo的Java日记——2">
+<meta property="og:url" content="http://example.com/2020/08/29/giasodgo%E7%9A%84Java%E6%97%A5%E8%AE%B0%E2%80%94%E2%80%942/index.html">
 <meta property="og:site_name" content="giasodgo的博客">
+<meta property="og:description" content="第二章 java 基本程序设计结构（一）">
 <meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2020-08-29T08:31:01.000Z">
+<meta property="article:modified_time" content="2020-08-31T15:21:21.676Z">
 <meta property="article:author" content="giasodgo">
+<meta property="article:tag" content="Java">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="giasodgo的博客" type="application/atom+xml">
@@ -164,36 +169,164 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
+            <article id="post-giasodgo的Java日记——2" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
   
+    <h1 class="article-title" itemprop="name">
+      giasodgo的Java日记——2
+    </h1>
   
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2020" class="archive-year">2020</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/08/29/giasodgo%E7%9A%84Java%E6%97%A5%E8%AE%B0%E2%80%94%E2%80%942/" class="archive-article-date">
+
+
+        <!--显示阅读次数-->
+        
+        <br/>
+        <a class="cloud-tie-join-count" href="javascript:void(0);" style="color:gray;font-size:14px;">
+        <span class="icon-sort"></span>
+        <span id="busuanzi_container_page_pv" style="color:#ef7522;font-size:14px;">
+            阅读数: <span id="busuanzi_value_page_pv"></span>次 &nbsp;&nbsp;
+        </span>
+        </a>
+        
+
+        
+        <a href="/2020/08/29/giasodgo%E7%9A%84Java%E6%97%A5%E8%AE%B0%E2%80%94%E2%80%942/" class="archive-article-date">
   	<time datetime="2020-08-29T08:31:01.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-08-29</time>
 </a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/08/29/giasodgo%E7%9A%84Java%E6%97%A5%E8%AE%B0%E2%80%94%E2%80%942/">giasodgo的Java日记——2</a>
-    </h1>
-  
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="第二章-java-基本程序设计结构（一）"><a href="#第二章-java-基本程序设计结构（一）" class="headerlink" title="第二章 java 基本程序设计结构（一）"></a>第二章 java 基本程序设计结构（一）</h1><a id="more"></a>
+<h2 id="2-1-一个简单的Java程序"><a href="#2-1-一个简单的Java程序" class="headerlink" title="2.1 一个简单的Java程序"></a>2.1 一个简单的Java程序</h2><h4 id="写看一个最简单的Java应用程序："><a href="#写看一个最简单的Java应用程序：" class="headerlink" title="写看一个最简单的Java应用程序："></a>写看一个最简单的Java应用程序：</h4><pre><code>public class FirstProgram&#123;
+    public static void main(String args[])&#123;
+        System.out.println(&quot;hello world&quot;);
+    &#125;
+&#125;</code></pre>
+<p>这是一个简单的程序，功能是在终端窗口实现输出“hello world”<br>接下来对其每一部分进行分析：<br>public 被称为访问修饰符，用来控制访问这段代码的级别，这个之后还会讲到</p>
+<p>class 表明Java程序中的类，我们要运行的代码都放在里面，可以把它当做一个容器，里面定义了程序的行为，这个之后会具体说到</p>
+<p>class后紧跟的是类名，java中的类名要求比较宽松，必须以字母开头后面是字母和数字的任意组合，除了java的保留字，其他的都可以成为类名</p>
+<p>main：表示方法名，在规定中，java虚拟机将从指定类中的main方法开始执行，因此为了程序能够执行，源文件中必须有一个main方法，也可以成为主方法</p>
+<p>这里具体说一下java的命名规范：</p>
+<blockquote>
+<p>1.类名以大写字母开头，如果有多个单词就每个单词第一个字母大写——大驼峰命名法 <br><br>2.方法首字母全小写，如果有多个单词就从第二个首字母大写——小驼峰命名法 <br><br>3.属性同方法 <br><br>4.常量所有字母都大写，如果多个单词用下划线链接<br><br>5.包名每个字母都小写<br></p>
+</blockquote>
+<p>如果我们成功写好并保存为.java类型后，在保证没有错误的情况下便一这段代码，会得到一个.class类型的字节码文件存在于源文件同一目录下，最后再使用 java命令运行这段程序</p>
+<blockquote>
+<p>注意在运行字节码文件时，不需要添加拓展名<br><br>在使用记事本编写好代码后，文件名实际可能并不是.java文件类型，这可能是隐藏了后缀的问题，此时就需要显示隐藏的文件类型后缀名，通过以下方法：<br><a target="_blank" rel="noopener" href="https://jingyan.baidu.com/article/ab69b27065a0e02ca7189f32.html">https://jingyan.baidu.com/article/ab69b27065a0e02ca7189f32.html</a> <br><br>建议这个功能一直打开着，后面还会用到</p>
+</blockquote>
+<p>{ }里的就是我们需要写的语句了，通过书写语句我们可以做到不同的事情，在java中，每个语句必须用分号结束，可以讲多行语句写到一行中，也可以将一条语句写在多行上</p>
+<p>System.out是一个对象，并且通过它来调用println方法，其中符号”.”用来调用方法</p>
+<p>java的通用语法是：   对象.方法(参数)  学过c++或者c语言的朋友可以当作是函数的调用</p>
+<p>这个示例中，通过调用System.out这个对象使用println方法将后面的字符串打印到终端上，此时我们会在终端上看见到输出的“hello world”字样</p>
+<p>本节总结：不必深究上面的概念，只要稍作了解明白一个java程序必须拥有一个main函数就好</p>
+<h2 id="2-2-注释"><a href="#2-2-注释" class="headerlink" title="2.2 注释"></a>2.2 注释</h2><p>主要有以下三种注释方式</p>
+<blockquote>
+<p>①单行注释：”//“  多用于对每一行代码的解释，直接跟在一行语句的后面  <br></p>
+</blockquote>
+<blockquote>
+<p>②多行注释：” /* …..*/ “  <br></p>
+</blockquote>
+<blockquote>
+<p>③文档注释：”  /** …. */“  多用于对整个方法、类的解释 一般放在方法和类名的前面 <br></p>
+</blockquote>
+<h2 id="2-3-数据类型"><a href="#2-3-数据类型" class="headerlink" title="2.3 数据类型"></a>2.3 数据类型</h2><p>java数据类型分为基本数据类型和引用数据类型，其中常用的基本数据类型有8种，分别为4种整型，2种浮点类型，1中字符类型和一种真值类型</p>
+<h3 id="2-3-1-整型"><a href="#2-3-1-整型" class="headerlink" title="2.3.1 整型"></a>2.3.1 整型</h3><p>整型类型分为  int  short  long  byte 四种</p>
+<p>其中最常用的是int，int也是默认的整数类型，如果事先并未声明整数的类型，都看作是int</p>
+<p>*bytes 的取值范围是-128~127</p>
+<h3 id="2-3-2-浮点类型"><a href="#2-3-2-浮点类型" class="headerlink" title="2.3.2 浮点类型"></a>2.3.2 浮点类型</h3><p>浮点类型表示有小数部分，分为float 和double 两种</p>
+<p>最常用的是double类型，是浮点类型的默认类型<br>一个数只要有点就算是浮点类型，不管它实质表示的值是多少，如15.0，它依旧是个浮点类型</p>
+<p>float类型的数值有一个后缀（F或f），double类型的数值后缀为D或d，没有后缀时默认为double类型</p>
+<h3 id="2-3-3-字符类型"><a href="#2-3-3-字符类型" class="headerlink" title="2.3.3 字符类型"></a>2.3.3 字符类型</h3><p>char用于表示单个字符，其类型的字面量值要用单引号括起来，如’A’、’2’等</p>
+<h3 id="2-3-4-boolean类型"><a href="#2-3-4-boolean类型" class="headerlink" title="2.3.4 boolean类型"></a>2.3.4 boolean类型</h3><p>boolean类型有两个值：true和false，用来判断逻辑条件</p>
+<h2 id="2-4-变量"><a href="#2-4-变量" class="headerlink" title="2.4 变量"></a>2.4 变量</h2><p>每一个变量都有一个类型(type)，在声明变量时，变量类型在变量名之前。如 </p>
+<pre><code>int a  
+double x </code></pre>
+<p>变量必须要有明确的类型，什么类型的变量装载什么类型的数据，如int类型的变量无法装载double类型的数据</p>
+<p>变量名必须是一个以字母开头并由数字和字母够长序列，不能使用Java保留字作为变量名，允许在一行中声明多个变量，但不建议这么做</p>
+<p>变量名对大小写敏感，如fuck和FUCK是两个不同的变量名，而且在声明变量时，对两个不同的变量最好不要只存在大小写上的差异</p>
+<h3 id="2-4-1-初始化"><a href="#2-4-1-初始化" class="headerlink" title="2.4.1 初始化"></a>2.4.1 初始化</h3><p>声明一个变量时，需要类型、变量名、数据这三个做准备，使用赋值语句对变量进行显式初始化，具体赋值语句如下</p>
+<pre><code>   【类型】     【变量名】  =   【数据】;</code></pre>
+<p>   当然也可以选择先对变量进行声明，等到后面再对变量名进行数据赋值。但是绝对不要直接使用一个声明过但是没有赋值的变量，这会导致出错</p>
+<h3 id="2-4-2-常量"><a href="#2-4-2-常量" class="headerlink" title="2.4.2 常量"></a>2.4.2 常量</h3><p>在Java中，利用一个关键字final来指示一个常量，如</p>
+<pre><code>public class Constants&#123;
+    public static void main(String args[])&#123;
+        final double a = 2.54; //a的值为2.54
+        double b = 8.5; //b的值为8.5
+        double c = 11;
+        b = 3.5;//b的值为3.5
+        a = 5; //错误
+    &#125;
+&#125;</code></pre>
+<p>被final标识过得变量只能被赋值一次，一旦赋值就不能在改变了，习惯上，final常量的常量名一般全大写</p>
+<h2 id="2-5运算符"><a href="#2-5运算符" class="headerlink" title="2.5运算符"></a>2.5运算符</h2><p>Java中常用的运算符有 + 、-  、*  、 /  、% ，其计算含义与数学上一致</p>
+<p>注意的是，不同数据类型之间的值进行预算时有如下规则：</p>
+<ul>
+<li>操作数都是整数时，加减乘数没有变化</li>
+<li>操作数只要含有浮点数时，结果一律按浮点数计算</li>
+<li>整数进行取余操作时时，结果一律按整数计算</li>
+<li>当整数被0除的话会产生一个异常，而浮点数被0除时会根据正负获得无穷大和NaN这两个结果</li>
+</ul>
+<h3 id="2-5-1-数学函数与常量"><a href="#2-5-1-数学函数与常量" class="headerlink" title="2.5.1 数学函数与常量"></a>2.5.1 数学函数与常量</h3><p>Math 类中有各种数学函数，这里列举几个常用的：</p>
+<ol>
+<li>平方根    Math.sqrt();</li>
+<li>幂运算    Math.pow(x,a)  代表x^a</li>
+<li>三角函数  sin  cos tan  atan  atan2</li>
+<li>指数  Math.exp 反函数   Math.log 自然对数   Math.log10 以10为底的对数</li>
+<li>常用常量   Math.PI——π   Math.E——e</li>
+</ol>
+<h3 id="2-5-2-数值类型之间的转换"><a href="#2-5-2-数值类型之间的转换" class="headerlink" title="2.5.2 数值类型之间的转换"></a>2.5.2 数值类型之间的转换</h3><p>一般进行二元操作时，往往都是相同类型的，而出现不同类型时，需要进行类型转换（默认操作）</p>
+<ul>
+<li>只要有一个double，其他都转换成double</li>
+<li>没有double有float，都转换为float</li>
+<li>没有float有long，都转化为long</li>
+<li>其他情况都转换为int</li>
+</ul>
+<h3 id="2-5-3-强制类型转换"><a href="#2-5-3-强制类型转换" class="headerlink" title="2.5.3 强制类型转换"></a>2.5.3 强制类型转换</h3><p>在必要时如果想要的结果不是默认的，则需要进行强制转换。操作为：在圆括号内给出想要转换的目标类型，后面紧跟转换的变量</p>
+<pre><code>doubel x = 20.311561；
+int y = （int）x ;//此时y为20</code></pre>
+<p>此时nx变量的值为20，但是我们会发现强制转换可能会丢是一些信息，小数点以后的值经过强制转换被截取，剩下的变为整型。<br>如果要进行四舍五入操作的话，需要使用Math类里的round方法，从而得到最接近的整数</p>
+<h3 id="2-5-4-关系和布尔运算符"><a href="#2-5-4-关系和布尔运算符" class="headerlink" title="2.5.4 关系和布尔运算符"></a>2.5.4 关系和布尔运算符</h3><p>常用的布尔运算符：==   !=   &gt;   &lt;   &gt;=   &lt;=</p>
+<p>可以表达布尔类型的方法有很多，一般用==来表示，如 1==3表示false  1==1表示true。当然也可以使用 !=表示检测不相等，如1 != 7 表示true</p>
+<p>如果有多个表达式共同作用，此时就需要引入逻辑标识符  &amp;&amp;(且)  、 ||(或)</p>
 
-        <div class="article-info info-on-right">
-          
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢老板，老板大气<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/assets/fukuan.jpg">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -205,7 +338,7 @@
 		</ul>
 	</div>
 
-          
+      
 	<div class="article-category tagcloud">
 		<i class="icon-book icon"></i>
 		<ul class="article-tag-list">
@@ -218,93 +351,119 @@
 	</div>
 
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://example.com/2020/08/29/giasodgo%E7%9A%84Java%E6%97%A5%E8%AE%B0%E2%80%94%E2%80%942/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/08/29/giasodgo%E7%9A%84Java%E6%97%A5%E8%AE%B0%E2%80%94%E2%80%941/" class="archive-article-date">
-  	<time datetime="2020-08-29T02:24:25.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-08-29</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2020/08/29/giasodgo%E7%9A%84Java%E6%97%A5%E8%AE%B0%E2%80%94%E2%80%941/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">giasodgo的Java日记——1</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/08/29/giasodgo%E7%9A%84Java%E6%97%A5%E8%AE%B0%E2%80%94%E2%80%941/">giasodgo的Java日记——1</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Java</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/Java日记//" class="article-tag-list-link color2">Java日记</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
+        
+        
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%AC%AC%E4%BA%8C%E7%AB%A0-java-%E5%9F%BA%E6%9C%AC%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E7%BB%93%E6%9E%84%EF%BC%88%E4%B8%80%EF%BC%89"><span class="toc-number">1.</span> <span class="toc-text">第二章 java 基本程序设计结构（一）</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#2-1-%E4%B8%80%E4%B8%AA%E7%AE%80%E5%8D%95%E7%9A%84Java%E7%A8%8B%E5%BA%8F"><span class="toc-number">1.1.</span> <span class="toc-text">2.1 一个简单的Java程序</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%86%99%E7%9C%8B%E4%B8%80%E4%B8%AA%E6%9C%80%E7%AE%80%E5%8D%95%E7%9A%84Java%E5%BA%94%E7%94%A8%E7%A8%8B%E5%BA%8F%EF%BC%9A"><span class="toc-number">1.1.0.1.</span> <span class="toc-text">写看一个最简单的Java应用程序：</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-2-%E6%B3%A8%E9%87%8A"><span class="toc-number">1.2.</span> <span class="toc-text">2.2 注释</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-3-%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B"><span class="toc-number">1.3.</span> <span class="toc-text">2.3 数据类型</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#2-3-1-%E6%95%B4%E5%9E%8B"><span class="toc-number">1.3.1.</span> <span class="toc-text">2.3.1 整型</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-3-2-%E6%B5%AE%E7%82%B9%E7%B1%BB%E5%9E%8B"><span class="toc-number">1.3.2.</span> <span class="toc-text">2.3.2 浮点类型</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-3-3-%E5%AD%97%E7%AC%A6%E7%B1%BB%E5%9E%8B"><span class="toc-number">1.3.3.</span> <span class="toc-text">2.3.3 字符类型</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-3-4-boolean%E7%B1%BB%E5%9E%8B"><span class="toc-number">1.3.4.</span> <span class="toc-text">2.3.4 boolean类型</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-4-%E5%8F%98%E9%87%8F"><span class="toc-number">1.4.</span> <span class="toc-text">2.4 变量</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#2-4-1-%E5%88%9D%E5%A7%8B%E5%8C%96"><span class="toc-number">1.4.1.</span> <span class="toc-text">2.4.1 初始化</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-4-2-%E5%B8%B8%E9%87%8F"><span class="toc-number">1.4.2.</span> <span class="toc-text">2.4.2 常量</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-5%E8%BF%90%E7%AE%97%E7%AC%A6"><span class="toc-number">1.5.</span> <span class="toc-text">2.5运算符</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#2-5-1-%E6%95%B0%E5%AD%A6%E5%87%BD%E6%95%B0%E4%B8%8E%E5%B8%B8%E9%87%8F"><span class="toc-number">1.5.1.</span> <span class="toc-text">2.5.1 数学函数与常量</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-5-2-%E6%95%B0%E5%80%BC%E7%B1%BB%E5%9E%8B%E4%B9%8B%E9%97%B4%E7%9A%84%E8%BD%AC%E6%8D%A2"><span class="toc-number">1.5.2.</span> <span class="toc-text">2.5.2 数值类型之间的转换</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-5-3-%E5%BC%BA%E5%88%B6%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2"><span class="toc-number">1.5.3.</span> <span class="toc-text">2.5.3 强制类型转换</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-5-4-%E5%85%B3%E7%B3%BB%E5%92%8C%E5%B8%83%E5%B0%94%E8%BF%90%E7%AE%97%E7%AC%A6"><span class="toc-number">1.5.4.</span> <span class="toc-text">2.5.4 关系和布尔运算符</span></a></li></ol></li></ol></li></ol>
+                    </div>
+                </span>
+            </div>
         </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
+        
+    </div>
+</aside>
+
+
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/08/27/my-first-demo-blog/" class="archive-article-date">
-  	<time datetime="2020-08-27T15:09:45.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-08-27</time>
-</a>
-        </div>
-    	 
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/08/27/my-first-demo-blog/">my first demo blog</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
   
 
-    
+  
+
+  
+
+
 
 
           </div>
@@ -332,8 +491,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
