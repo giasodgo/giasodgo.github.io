@@ -16,7 +16,7 @@
 <meta property="og:description" content="第二章 java 基本程序设计结构（一）">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2020-08-29T08:31:01.000Z">
-<meta property="article:modified_time" content="2020-08-31T15:21:21.676Z">
+<meta property="article:modified_time" content="2020-09-06T11:26:50.594Z">
 <meta property="article:author" content="giasodgo">
 <meta property="article:tag" content="Java">
 <meta name="twitter:card" content="summary">
@@ -252,6 +252,15 @@ double x </code></pre>
 <h3 id="2-4-1-初始化"><a href="#2-4-1-初始化" class="headerlink" title="2.4.1 初始化"></a>2.4.1 初始化</h3><p>声明一个变量时，需要类型、变量名、数据这三个做准备，使用赋值语句对变量进行显式初始化，具体赋值语句如下</p>
 <pre><code>   【类型】     【变量名】  =   【数据】;</code></pre>
 <p>   当然也可以选择先对变量进行声明，等到后面再对变量名进行数据赋值。但是绝对不要直接使用一个声明过但是没有赋值的变量，这会导致出错</p>
+<p>变量定义和使用的注意事项</p>
+<ol>
+<li><p>变量定义后，不赋值不能使用</p>
+</li>
+<li><p>变量有自己的作用范围，变量的有效范围为定义的一对大括号内</p>
+</li>
+<li><p>变量不允许重复定义</p>
+</li>
+</ol>
 <h3 id="2-4-2-常量"><a href="#2-4-2-常量" class="headerlink" title="2.4.2 常量"></a>2.4.2 常量</h3><p>在Java中，利用一个关键字final来指示一个常量，如</p>
 <pre><code>public class Constants&#123;
     public static void main(String args[])&#123;
@@ -271,6 +280,18 @@ double x </code></pre>
 <li>整数进行取余操作时时，结果一律按整数计算</li>
 <li>当整数被0除的话会产生一个异常，而浮点数被0除时会根据正负获得无穷大和NaN这两个结果</li>
 </ul>
+<p>值得注意的是”+”这个运算符</p>
+<blockquote>
+<p>当它两边连接的是基本数据类型，则按数学意义上进行相加操作<br><br>当一个字符串和其他任意数据类型使用”+”相连时，此时的”+”起到的是连接作用。而且所有的数据只要与字符串相连，都会变成字符串类型</p>
+</blockquote>
+<p>当然还有除法运算符”/“</p>
+<blockquote>
+<p>如果没有完成整除，则直接截取整除部分为结果<br></p>
+</blockquote>
+<p>同样的也有取模运算”%”</p>
+<blockquote>
+<p>取模指的是两数相除，取得是余数。余数永远小于除数</p>
+</blockquote>
 <h3 id="2-5-1-数学函数与常量"><a href="#2-5-1-数学函数与常量" class="headerlink" title="2.5.1 数学函数与常量"></a>2.5.1 数学函数与常量</h3><p>Math 类中有各种数学函数，这里列举几个常用的：</p>
 <ol>
 <li>平方根    Math.sqrt();</li>
@@ -286,13 +307,34 @@ double x </code></pre>
 <li>没有float有long，都转化为long</li>
 <li>其他情况都转换为int</li>
 </ul>
+<p>转换方式：</p>
+<p>自动转换：取值范围小的可以直接转换为取值范围大的类型</p>
+<p>强制转换：取值范围大的不能直接转换为取值范围小的类型</p>
+<p>布尔类型不参与类型转换</p>
+<p>类型取值范围排列：byte-&gt;short-&gt;int-&gt;long-&gt;float-&gt;double</p>
 <h3 id="2-5-3-强制类型转换"><a href="#2-5-3-强制类型转换" class="headerlink" title="2.5.3 强制类型转换"></a>2.5.3 强制类型转换</h3><p>在必要时如果想要的结果不是默认的，则需要进行强制转换。操作为：在圆括号内给出想要转换的目标类型，后面紧跟转换的变量</p>
 <pre><code>doubel x = 20.311561；
 int y = （int）x ;//此时y为20</code></pre>
 <p>此时nx变量的值为20，但是我们会发现强制转换可能会丢是一些信息，小数点以后的值经过强制转换被截取，剩下的变为整型。<br>如果要进行四舍五入操作的话，需要使用Math类里的round方法，从而得到最接近的整数</p>
 <h3 id="2-5-4-关系和布尔运算符"><a href="#2-5-4-关系和布尔运算符" class="headerlink" title="2.5.4 关系和布尔运算符"></a>2.5.4 关系和布尔运算符</h3><p>常用的布尔运算符：==   !=   &gt;   &lt;   &gt;=   &lt;=</p>
 <p>可以表达布尔类型的方法有很多，一般用==来表示，如 1==3表示false  1==1表示true。当然也可以使用 !=表示检测不相等，如1 != 7 表示true</p>
-<p>如果有多个表达式共同作用，此时就需要引入逻辑标识符  &amp;&amp;(且)  、 ||(或)</p>
+<h3 id="2-5-5-逻辑运算符"><a href="#2-5-5-逻辑运算符" class="headerlink" title="2.5.5 逻辑运算符"></a>2.5.5 逻辑运算符</h3><p>对两个boolean类型数据之间进行计算，结果依旧是boolean类型</p>
+<ul>
+<li>&amp;：一边是false，运算结果就是false</li>
+<li>|：一边是true，运算结果就是true</li>
+<li>^: 两边相同为false，不同为true</li>
+<li>！：取反</li>
+<li>&amp;&amp;：短路与，一边是false，另一边不运行</li>
+<li>||：短路或，一边是true，另一边不运行</li>
+</ul>
+<h3 id="2-5-6-三元运算符"><a href="#2-5-6-三元运算符" class="headerlink" title="2.5.6 三元运算符"></a>2.5.6 三元运算符</h3><p>公式：</p>
+<blockquote>
+<p>布尔表达式  ?   结果1:结果2  <br></p>
+<ul>
+<li>布尔表达式结果是true，三元运算符的结果就是结果1<br></li>
+<li>布尔表达式结果为false，三元运算符的结果就是结果2</li>
+</ul>
+</blockquote>
 
       
 
@@ -413,6 +455,15 @@ int y = （int）x ;//此时y为20</code></pre>
   
 <nav id="article-nav">
   
+    <a href="/2020/09/08/Linux%E6%96%87%E4%BB%B6%E6%93%8D%E4%BD%9C%E5%91%BD%E4%BB%A4ls%E7%9A%84C%E8%AF%AD%E8%A8%80%E5%AE%9E%E7%8E%B0/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          Linux文件操作命令ls的C语言实现
+        
+      </div>
+    </a>
+  
   
     <a href="/2020/08/29/giasodgo%E7%9A%84Java%E6%97%A5%E8%AE%B0%E2%80%94%E2%80%941/" id="article-nav-older" class="article-nav-link-wrap">
       <div class="article-nav-title">giasodgo的Java日记——1</div>
@@ -442,7 +493,7 @@ int y = （int）x ;//此时y为20</code></pre>
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%AC%AC%E4%BA%8C%E7%AB%A0-java-%E5%9F%BA%E6%9C%AC%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E7%BB%93%E6%9E%84%EF%BC%88%E4%B8%80%EF%BC%89"><span class="toc-number">1.</span> <span class="toc-text">第二章 java 基本程序设计结构（一）</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#2-1-%E4%B8%80%E4%B8%AA%E7%AE%80%E5%8D%95%E7%9A%84Java%E7%A8%8B%E5%BA%8F"><span class="toc-number">1.1.</span> <span class="toc-text">2.1 一个简单的Java程序</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%86%99%E7%9C%8B%E4%B8%80%E4%B8%AA%E6%9C%80%E7%AE%80%E5%8D%95%E7%9A%84Java%E5%BA%94%E7%94%A8%E7%A8%8B%E5%BA%8F%EF%BC%9A"><span class="toc-number">1.1.0.1.</span> <span class="toc-text">写看一个最简单的Java应用程序：</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-2-%E6%B3%A8%E9%87%8A"><span class="toc-number">1.2.</span> <span class="toc-text">2.2 注释</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-3-%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B"><span class="toc-number">1.3.</span> <span class="toc-text">2.3 数据类型</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#2-3-1-%E6%95%B4%E5%9E%8B"><span class="toc-number">1.3.1.</span> <span class="toc-text">2.3.1 整型</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-3-2-%E6%B5%AE%E7%82%B9%E7%B1%BB%E5%9E%8B"><span class="toc-number">1.3.2.</span> <span class="toc-text">2.3.2 浮点类型</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-3-3-%E5%AD%97%E7%AC%A6%E7%B1%BB%E5%9E%8B"><span class="toc-number">1.3.3.</span> <span class="toc-text">2.3.3 字符类型</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-3-4-boolean%E7%B1%BB%E5%9E%8B"><span class="toc-number">1.3.4.</span> <span class="toc-text">2.3.4 boolean类型</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-4-%E5%8F%98%E9%87%8F"><span class="toc-number">1.4.</span> <span class="toc-text">2.4 变量</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#2-4-1-%E5%88%9D%E5%A7%8B%E5%8C%96"><span class="toc-number">1.4.1.</span> <span class="toc-text">2.4.1 初始化</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-4-2-%E5%B8%B8%E9%87%8F"><span class="toc-number">1.4.2.</span> <span class="toc-text">2.4.2 常量</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-5%E8%BF%90%E7%AE%97%E7%AC%A6"><span class="toc-number">1.5.</span> <span class="toc-text">2.5运算符</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#2-5-1-%E6%95%B0%E5%AD%A6%E5%87%BD%E6%95%B0%E4%B8%8E%E5%B8%B8%E9%87%8F"><span class="toc-number">1.5.1.</span> <span class="toc-text">2.5.1 数学函数与常量</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-5-2-%E6%95%B0%E5%80%BC%E7%B1%BB%E5%9E%8B%E4%B9%8B%E9%97%B4%E7%9A%84%E8%BD%AC%E6%8D%A2"><span class="toc-number">1.5.2.</span> <span class="toc-text">2.5.2 数值类型之间的转换</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-5-3-%E5%BC%BA%E5%88%B6%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2"><span class="toc-number">1.5.3.</span> <span class="toc-text">2.5.3 强制类型转换</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-5-4-%E5%85%B3%E7%B3%BB%E5%92%8C%E5%B8%83%E5%B0%94%E8%BF%90%E7%AE%97%E7%AC%A6"><span class="toc-number">1.5.4.</span> <span class="toc-text">2.5.4 关系和布尔运算符</span></a></li></ol></li></ol></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%AC%AC%E4%BA%8C%E7%AB%A0-java-%E5%9F%BA%E6%9C%AC%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E7%BB%93%E6%9E%84%EF%BC%88%E4%B8%80%EF%BC%89"><span class="toc-number">1.</span> <span class="toc-text">第二章 java 基本程序设计结构（一）</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#2-1-%E4%B8%80%E4%B8%AA%E7%AE%80%E5%8D%95%E7%9A%84Java%E7%A8%8B%E5%BA%8F"><span class="toc-number">1.1.</span> <span class="toc-text">2.1 一个简单的Java程序</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%86%99%E7%9C%8B%E4%B8%80%E4%B8%AA%E6%9C%80%E7%AE%80%E5%8D%95%E7%9A%84Java%E5%BA%94%E7%94%A8%E7%A8%8B%E5%BA%8F%EF%BC%9A"><span class="toc-number">1.1.0.1.</span> <span class="toc-text">写看一个最简单的Java应用程序：</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-2-%E6%B3%A8%E9%87%8A"><span class="toc-number">1.2.</span> <span class="toc-text">2.2 注释</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-3-%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B"><span class="toc-number">1.3.</span> <span class="toc-text">2.3 数据类型</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#2-3-1-%E6%95%B4%E5%9E%8B"><span class="toc-number">1.3.1.</span> <span class="toc-text">2.3.1 整型</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-3-2-%E6%B5%AE%E7%82%B9%E7%B1%BB%E5%9E%8B"><span class="toc-number">1.3.2.</span> <span class="toc-text">2.3.2 浮点类型</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-3-3-%E5%AD%97%E7%AC%A6%E7%B1%BB%E5%9E%8B"><span class="toc-number">1.3.3.</span> <span class="toc-text">2.3.3 字符类型</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-3-4-boolean%E7%B1%BB%E5%9E%8B"><span class="toc-number">1.3.4.</span> <span class="toc-text">2.3.4 boolean类型</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-4-%E5%8F%98%E9%87%8F"><span class="toc-number">1.4.</span> <span class="toc-text">2.4 变量</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#2-4-1-%E5%88%9D%E5%A7%8B%E5%8C%96"><span class="toc-number">1.4.1.</span> <span class="toc-text">2.4.1 初始化</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-4-2-%E5%B8%B8%E9%87%8F"><span class="toc-number">1.4.2.</span> <span class="toc-text">2.4.2 常量</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-5%E8%BF%90%E7%AE%97%E7%AC%A6"><span class="toc-number">1.5.</span> <span class="toc-text">2.5运算符</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#2-5-1-%E6%95%B0%E5%AD%A6%E5%87%BD%E6%95%B0%E4%B8%8E%E5%B8%B8%E9%87%8F"><span class="toc-number">1.5.1.</span> <span class="toc-text">2.5.1 数学函数与常量</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-5-2-%E6%95%B0%E5%80%BC%E7%B1%BB%E5%9E%8B%E4%B9%8B%E9%97%B4%E7%9A%84%E8%BD%AC%E6%8D%A2"><span class="toc-number">1.5.2.</span> <span class="toc-text">2.5.2 数值类型之间的转换</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-5-3-%E5%BC%BA%E5%88%B6%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2"><span class="toc-number">1.5.3.</span> <span class="toc-text">2.5.3 强制类型转换</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-5-4-%E5%85%B3%E7%B3%BB%E5%92%8C%E5%B8%83%E5%B0%94%E8%BF%90%E7%AE%97%E7%AC%A6"><span class="toc-number">1.5.4.</span> <span class="toc-text">2.5.4 关系和布尔运算符</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-5-5-%E9%80%BB%E8%BE%91%E8%BF%90%E7%AE%97%E7%AC%A6"><span class="toc-number">1.5.5.</span> <span class="toc-text">2.5.5 逻辑运算符</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-5-6-%E4%B8%89%E5%85%83%E8%BF%90%E7%AE%97%E7%AC%A6"><span class="toc-number">1.5.6.</span> <span class="toc-text">2.5.6 三元运算符</span></a></li></ol></li></ol></li></ol>
                     </div>
                 </span>
             </div>
@@ -562,6 +613,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
             <input type="checkbox" q-on="click:toggleTag(e)" q-attr="checked:showTags">
           </label>
           <ul class="article-tag-list" q-show="showTags">
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">Linux</a>
+              </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">Java</a>

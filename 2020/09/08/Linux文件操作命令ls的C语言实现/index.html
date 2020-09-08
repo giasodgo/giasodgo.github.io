@@ -6,15 +6,22 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://example.com">
-  <title>giasodgo的博客</title>
+  <title>Linux文件操作命令ls的C语言实现 | giasodgo的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="giasodgo的博客">
-<meta property="og:url" content="http://example.com/index.html">
+  <meta name="description" content="Linux文件操作命令ls的C语言实现——Linux程序设计综合训练">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Linux文件操作命令ls的C语言实现">
+<meta property="og:url" content="http://example.com/2020/09/08/Linux%E6%96%87%E4%BB%B6%E6%93%8D%E4%BD%9C%E5%91%BD%E4%BB%A4ls%E7%9A%84C%E8%AF%AD%E8%A8%80%E5%AE%9E%E7%8E%B0/index.html">
 <meta property="og:site_name" content="giasodgo的博客">
+<meta property="og:description" content="Linux文件操作命令ls的C语言实现——Linux程序设计综合训练">
 <meta property="og:locale" content="en_US">
+<meta property="og:image" content="http://example.com/images/Linux%E6%96%87%E4%BB%B6%E6%93%8D%E4%BD%9C%E5%91%BD%E4%BB%A4ls%E7%9A%84C%E8%AF%AD%E8%A8%80%E5%AE%9E%E7%8E%B0%E2%80%94%E2%80%94p1.png">
+<meta property="article:published_time" content="2020-09-08T02:49:25.000Z">
+<meta property="article:modified_time" content="2020-09-08T03:32:56.563Z">
 <meta property="article:author" content="giasodgo">
+<meta property="article:tag" content="Linux">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://example.com/images/Linux%E6%96%87%E4%BB%B6%E6%93%8D%E4%BD%9C%E5%91%BD%E4%BB%A4ls%E7%9A%84C%E8%AF%AD%E8%A8%80%E5%AE%9E%E7%8E%B0%E2%80%94%E2%80%94p1.png">
   
     <link rel="alternative" href="/atom.xml" title="giasodgo的博客" type="application/atom+xml">
   
@@ -164,21 +171,27 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-    <article id="post-Linux文件操作命令ls的C语言实现" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+            <article id="post-Linux文件操作命令ls的C语言实现" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/09/08/Linux%E6%96%87%E4%BB%B6%E6%93%8D%E4%BD%9C%E5%91%BD%E4%BB%A4ls%E7%9A%84C%E8%AF%AD%E8%A8%80%E5%AE%9E%E7%8E%B0/">Linux文件操作命令ls的C语言实现</a>
+    <h1 class="article-title" itemprop="name">
+      Linux文件操作命令ls的C语言实现
     </h1>
   
 
 
         <!--显示阅读次数-->
+        
+        <br/>
+        <a class="cloud-tie-join-count" href="javascript:void(0);" style="color:gray;font-size:14px;">
+        <span class="icon-sort"></span>
+        <span id="busuanzi_container_page_pv" style="color:#ef7522;font-size:14px;">
+            阅读数: <span id="busuanzi_value_page_pv"></span>次 &nbsp;&nbsp;
+        </span>
+        </a>
         
 
         
@@ -190,12 +203,234 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="Linux文件操作命令ls的C语言实现——Linux程序设计综合训练"><a href="#Linux文件操作命令ls的C语言实现——Linux程序设计综合训练" class="headerlink" title="Linux文件操作命令ls的C语言实现——Linux程序设计综合训练"></a>Linux文件操作命令ls的C语言实现——Linux程序设计综合训练</h1>
-        
-          <a class="article-more-a" href="/2020/09/08/Linux%E6%96%87%E4%BB%B6%E6%93%8D%E4%BD%9C%E5%91%BD%E4%BB%A4ls%E7%9A%84C%E8%AF%AD%E8%A8%80%E5%AE%9E%E7%8E%B0/#more">more >></a>
-        
+        <h1 id="Linux文件操作命令ls的C语言实现——Linux程序设计综合训练"><a href="#Linux文件操作命令ls的C语言实现——Linux程序设计综合训练" class="headerlink" title="Linux文件操作命令ls的C语言实现——Linux程序设计综合训练"></a>Linux文件操作命令ls的C语言实现——Linux程序设计综合训练</h1><a id="more"></a>
+
+<h2 id="一、综合训练目的与要求"><a href="#一、综合训练目的与要求" class="headerlink" title="一、综合训练目的与要求"></a>一、综合训练目的与要求</h2><p>操作系统控制和管理计算机硬件和软件资源，其中文件系统是非常重要的一块，它的事故续阿布占用了操作系统源码的最大编码量，直接影响用户对操作系统的使用程度和感受，本次实验通过使用c语言，简单实现文件系统中的ls命令，培养学生的动手编程能力，并加深对操作系统的认知和理解。</p>
+<p>目的：在linux下用c语言简单实现ls的部分功能</p>
+<p>要求： </p>
+<ol>
+<li>不能使用system函数或exec系列函数</li>
+<li>在linux下进行编程</li>
+<li>附上编程思路和理解</li>
+<li>思考分写和连写如何实现判断和处理</li>
+<li>思考如何通过文件类型输出不同的颜色</li>
+<li>源代码需要有较详细的文字注释</li>
+<li>有余力的同学可以完成附加题</li>
+</ol>
+<h2 id="二、总体设计概述"><a href="#二、总体设计概述" class="headerlink" title="二、总体设计概述"></a>二、总体设计概述</h2><p>(1)编写ls –a.c文件，查看相关函数和结构体，实现ls –a功能：显示所有档案及目录。</p>
+<p>(2)通过分析ls –a命令，将其进行修改，完成ls.c文件，实现ls功能：显示档案及目录（隐藏目录名称为”.”的文件和目录。</p>
+<p>(3)通过分析ls –a 命令，将其进行修改，完成ls –d文件，实现ls –d功能：仅显示目录名，不显示目录下的列表。</p>
+<p>(4)编写ls -al，查看相关函数和结构体，实现ls –al功能：以长格式显示目录下的内容列表，输出的信息从左到右为文件名、文件类型、权限、硬连接数、所有者、组、文件大小、文件修改时间等。</p>
+<p>(5)通过分析ls –al 、ls-a、ls命令，将其进行修改，完成ls –l文件，实现ls –l功能：与ls-al相似，不过隐藏目录名称为”.”的文件和目录。</p>
+<p>(6)通过分析la –al命令，将其进行修改，完成ls –i功能，实现ls-i功能：显示文件节点号，一个索引节点代表一个文件。</p>
+<p>(7)编写—full-time命令，实现ls –full-time命令：列出完整的日期与时间。</p>
+<p>(8)完成思考题，合并一些命令、实现连写，使其能够实现多个命令。</p>
+<p>(9)完成思考题，根据不同文件类型输出颜色不同。</p>
+<h2 id="三、详细设计说明"><a href="#三、详细设计说明" class="headerlink" title="三、详细设计说明"></a>三、详细设计说明</h2><h3 id="1-ls-–a命令："><a href="#1-ls-–a命令：" class="headerlink" title="(1)ls –a命令："></a>(1)ls –a命令：</h3><p>①功能：显示所有档案及目录</p>
+<p>②编写思路：</p>
+<p>1.通过man命令，查找与读取文件有关的命令和函数</p>
+<p>2.对函数进行分析</p>
+<pre><code>#include &lt;dirent.h&gt;
+#include&lt;sys/types.h&gt;
+struct  dirent  *  readdir (  DIR  *  dir  ) ;  </code></pre>
+<p>该函数返回struct dirent 这个指针类型，传进去DIR *dirp的参数</p>
+<p>功能：返回dir目录流的下个目录进入点</p>
+<p>3.根据2中函数,查找struct dirent 结构体</p>
+<pre><code>struct dirent &#123;
+           ino_t          d_ino;           此目录进入点的inode
+           off_t          d_off;           目录文件开头至此目录进入点的位移
+           unsigned short d_reclen;          d_name的长度
+           unsigned char  d_type;           d_name 所指的文件类型 d_name 文件名                                     
+           char           d_name[256];    /* filename */   文件名
+       &#125;；</code></pre>
+<p>4.根据查找，readdir 需要的DIR*dir参数要来自于opendir函数</p>
+<pre><code>    #include &lt;sys/types.h&gt;
+    #include &lt;dirent.h&gt;
+    DIR *opendir(const char *name);</code></pre>
+<p>opendir()用来打开参数name 指定的目录, 并返回DIR*形态的目录流</p>
+<p>③思路总结：</p>
+<p>1.打开当前目录的对应的dir文件</p>
+<blockquote>
+<p>DIR* dir_ptr =opendir(“.”);</p>
+</blockquote>
+<p>2.读取当前目录的dir_ptr结构中的文件名并打印；</p>
+<blockquote>
+<p>direntp = readdir(dir_ptr)<br><br>printf(“%s\n”,direntrp-&gt;name);</p>
+</blockquote>
+<p>3.关闭dir文件</p>
+<p>④主要函数：</p>
+<p>1.Myls（char dirname []）函数：</p>
+<p>通过opendir操作获得目录指向dir指针,将dir结构的指针dir_ptr作为opendir的参数循环获得每个条目，循环打印</p>
+<p>2.Main 函数：传参，根据输入目录调用myls函数</p>
+<h3 id="2-ls命令"><a href="#2-ls命令" class="headerlink" title="(2)ls命令"></a>(2)ls命令</h3><p>①功能：显示档案及目录，隐藏档案名或目录名为“ . ”的文件和目录名</p>
+<p>②编写思路：与ls-a的差别为输出是会不会输出档案名或目录名为“ . ”的文件和目录名，故可在输出时截取文件名带“ . ”的文件和目录名。</p>
+<p>③思路总结：当通过direntrp指针调取dirent结构体里的文件名filename时，添加判断，当文件名有“ . ”时不进行输出</p>
+<p>④主要操作：</p>
+<pre><code>if(  strcmp(direntp-&gt;d_name, &quot;.&quot;) != 0 &amp;&amp; strcmp(direntp-&gt;d_name, &quot;..&quot;) != 0)
+      printf(&quot;%s\n&quot;, direntp-&gt;d_name);</code></pre>
+<h3 id="3-ls-–d命令"><a href="#3-ls-–d命令" class="headerlink" title="(3)ls –d命令"></a>(3)ls –d命令</h3><p>①功能：仅显示目录名，不显示目录下的列表。</p>
+<p>②编写思路：与ls命令类似，若只输出根目录“ . ”，在输出时对其他文件和目录进行截取</p>
+<p>③思路总结：当通过direntrp指针调取dirent结构体里的文件名filename时，添加判断，当文件名为“ . ”时进行输出。</p>
+<p>④主要操作：</p>
+<pre><code>if(  strcmp(direntp-&gt;d_name, &quot;.&quot;) == 0 )             
+     printf(&quot;%s\n&quot;, direntp-&gt;d_name);</code></pre>
+<h3 id="4-ls-–al命令"><a href="#4-ls-–al命令" class="headerlink" title="(4)ls –al命令"></a>(4)ls –al命令</h3><p>①功能：以长格式显示目录下的内容列表，输出的信息从左到右为文件名、文件类型、权限、硬连接数、所有者、组、文件大小、文件修改时间等。</p>
+<p>②编写思路：<br>1.通过man命令查找与文件信息有关的函数</p>
+<pre><code>man -k file | grep -i status</code></pre>
+<p>2.得到stat函数对stat函数进行分析</p>
+<p>通过文件名filename获取文件信息，并保存在buf所指的结构体stat中<br>参数：*path为文件名信息，后面为一个stat结构体</p>
+<p>3.根据（2）对stat结构体进行分析 </p>
+<pre><code>struct stat&#123;
+    dev_t     st_dev;      /* 文件使用的设备号
+    ino_t     st_ino;       /索引节点号
+    mode_t    st_mode;   文件对应的模式，文件，目录等
+    nlink_t   st_nlink;    /文件的硬连接数  
+    uid_t     st_uid;      /所有者用户识别号
+    gid_t     st_gid;      /组识别号  
+    dev_t     st_rdev;    /设备文件的设备号
+    off_t     st_size;     /以字节为单位的文件容量  
+    blksize_t st_blksize;  含该文件的磁盘块的大小  
+    blkcnt_t  st_blocks;   文件所占的磁盘块  
+    time_t    st_atime;    最后一次访问该文件的时间  
+    time_t    st_mtime;    最后一次修改该文件的时间  
+    time_t    st_ctime;    最后一次改变该文件状态的时间  
+&#125;;</code></pre>
+<p>通过使用stat函数，可以调用stat结构体里的参数从而调出文件信息</p>
+<p>4.新的问题</p>
+<p>（I）mode_t    st_mode 是一个16位的二进制数，其中包含文件的权限，而在ls –l命令中权限是以-r-w-x等符号新型表示的，如何将一个二进是数转化为编码符号呢？</p>
+<p>（II）stat结构体中，文件所有者uid_t  st_uid和组gid_t  st_gid都以ID这样的数字形式存在，而在ls中要求输出用户名和组名，如何将数字ID转化成用户名和组名呢？</p>
+<p>（III）stat结构体中，与实践相关的参数都是以这一年开始到现在为止过的秒数来计算的实践，而ls要求比较精确的时间，如何将modtime进行转换呢？</p>
+<p>5.解决问题1</p>
+<p>根据网络查找，st_mode主要包含3部分信息</p>
+<blockquote>
+<p>15-12 位保存文件类型<br><br>11-9 位保存执行文件时设置的信息<br><br>8-0 位保存文件访问权限<br></p>
+</blockquote>
+<p><img src="/images/Linux%E6%96%87%E4%BB%B6%E6%93%8D%E4%BD%9C%E5%91%BD%E4%BB%A4ls%E7%9A%84C%E8%AF%AD%E8%A8%80%E5%AE%9E%E7%8E%B0%E2%80%94%E2%80%94p1.png" alt="alt"></p>
+<p>由图可知，0-8位存放着该文件或目录的权限，每种用户通过三位的二进制数来表示权限，第三位为1位可读r，第二位为1表示可写w。<br>所以需要将权限为提取出来，对每位的二进制数进行判断，分别对其进行可读可写的赋值</p>
+<p>6.解决问题2</p>
+<p>通过查找发现可以通过uid_to_name()函数和gid_to_name()对用户号和组号进行转化</p>
+<p>7.解决问题3</p>
+<p>通过使用ctime() 函数来得到精确的时间</p>
+<p>③主要函数：</p>
+<blockquote>
+<p>mode_to_letters  (  int  mode  ,  char  str[ ]  )</p>
+</blockquote>
+<p>读取st_mode中的10位，通过调用每一位对应的判断函数，来判断这一位的值，并赋予其含义，前八位通过与操作判断其位置上的二进制值，总而给予读写权限。</p>
+<blockquote>
+<p>id_to_name  (  uid_t  uid  )</p>
+</blockquote>
+<p>通过将getpwuid函数，查找用户uid对应的数据，再通过指针调出其中的用户名</p>
+<blockquote>
+<p>gid_to_name  (  gid_t    gid  )</p>
+</blockquote>
+<p>通过将getgrgid()函数，查找用户gid对应的数据，再通过指针调出其中的组名</p>
+<blockquote>
+<p>do_ls  ( char  dirname [  ]  ) </p>
+</blockquote>
+<p>通过opendir操作获得目录指向dir的指针</p>
+<p>将dir结构的指针dir_ptr作为opendir的参数循环获得每个条目.</p>
+<blockquote>
+<p>show_file_info  ( char * filename  ,  struct  stat* info_p )</p>
+</blockquote>
+<p>调用uid_to_name(), *ctime(), *gid_to_name(), *filemode()并对信息进行输出</p>
+<blockquote>
+<p>Main  (  int  ac , char * av[ ] ) </p>
+</blockquote>
+<p>传参，根据输入目录调用do_ls函数</p>
+<h3 id="5-ls-l命令"><a href="#5-ls-l命令" class="headerlink" title="(5)ls-l命令"></a>(5)ls-l命令</h3><p>①功能：以长格式显示目录下的内容列表。输出的信息从左到右依次包括文件名，文件类型、权限模式、硬连接数、所有者、组、文件大小和文件的最后修改时间等，与al不同的是不输出目录或文件名为“ . ”的文件和目录</p>
+<p>②编写思路：在show_file_info  函数输出是添加判断，对带有“ . ”的目录进行拦截</p>
+<p>③主要操作：</p>
+<pre><code>    if (strcmp(filename,&quot;.&quot;)!=0&amp;&amp;strcmp(filename,&quot;..&quot;)!=0)&#123;
+         printf(&quot;%s&quot;, modestr);
+         printf(&quot; %4d&quot;, (int) info_p-&gt;st_nlink);
+         printf(&quot; %-8s&quot;, uid_to_name(info_p-&gt;st_uid));
+         printf(&quot; %-8s&quot;, gid_to_name(info_p-&gt;st_gid));
+         printf(&quot; %8ld&quot;, (long) info_p-&gt;st_size);
+         printf(&quot; %.12s&quot;, 4 + ctime(&amp;info_p-&gt;st_mtime)); 
+         printf(&quot; %s\n&quot;, filename); 
+      &#125;</code></pre>
+<h3 id="6-ls-–i命令"><a href="#6-ls-–i命令" class="headerlink" title="(6) ls –i命令"></a>(6) ls –i命令</h3><p>①功能：显示文件索引节点号（inode）。一个索引节点代表一个文件</p>
+<p>②编写思路：文件索引节点号信息存在stat结构体中，我们可以通过创建一个stat结构体，通过指针调用其中的所以节点号信息，同时输出文件或目录名。</p>
+<p>③主要操作：对show_file_info进行修改</p>
+<pre><code>       if (strcmp(filename,&quot;.&quot;)!=0&amp;&amp;strcmp(filename,&quot;..&quot;)!=0)&#123;
+              printf(&quot;%d&quot;,info_p-&gt;st_ino);
+              printf(&quot; %s\n&quot;, filename);
+        &#125;</code></pre>
+<h3 id="7-ls-–full-time命令"><a href="#7-ls-–full-time命令" class="headerlink" title="(7)ls –full-time命令"></a>(7)ls –full-time命令</h3><p>①功能：列出完整的日期与时间；</p>
+<p>②编写思路：通过调用strftime（）函数，按照要求即可获得所需要的精确时间</p>
+<p>③主要操作：</p>
+<pre><code>        time_t  t  =  statBuf.st_mtime ;
+        struct tm  *p  =  gmtime(&amp;t) ;
+        char  s[50] ;
+        strftime (s ,  50 , &quot;%Y-%m-%d %H:%M:%S&quot; ,  p );
+        printf( &quot; %s\t &quot;,  s  ) ; </code></pre>
+<h3 id="8-思考题：实现连写"><a href="#8-思考题：实现连写" class="headerlink" title="(8)思考题：实现连写"></a>(8)思考题：实现连写</h3><p>①编程思路：通过以上几个命令的分析，发现其中的相同点，都有对readdir 和stat 结构体有关，故通过添加一个函数，对输入的命令进行判断，当输入不同的命令字符时，对其进行分开赋值，然后分别实现不同的函数，从而实现连写的功能</p>
+<p>②主要操作：</p>
+<pre><code>#define LS_NONE 0   
+#define LS_R 102  
+#define LS_D 103  
+#define LS_I 104   
+#define LS_A 200  
+#define LS_AI (LS_A+LS_I)    
+int analyzeParam(char* input)&#123;  
+    if(strlen(input)==2)  
+    &#123;    
+        if(input[1]==&#39;a&#39;) return LS_A;  
+        if(input[1]==&#39;d&#39;) return LS_D;  
+        if(input[1]==&#39;R&#39;) return LS_R;  
+        if(input[1]==&#39;i&#39;) return LS_I;  
+    &#125;  
+    else if(strlen(input)==3)  
+    &#123;  
+        if(input[1]==&#39;a&#39;&amp;&amp; input[2]==&#39;i&#39;) return LS_AI;  
+    &#125;  
+    return -1;  
+&#125;  </code></pre>
+<h3 id="9-思考题：实现对不同类型的文件进行不同颜色的输出"><a href="#9-思考题：实现对不同类型的文件进行不同颜色的输出" class="headerlink" title="(9)思考题：实现对不同类型的文件进行不同颜色的输出"></a>(9)思考题：实现对不同类型的文件进行不同颜色的输出</h3><p>①编程思路：前面提到，文件的类型信息存储在stat结构体的st_mode中，我们通过调用st_mode并对其进行判断从而得到文件的类型。颜色输出可以通过printf函数，对其中输出的颜色进行改变，格式如下：printf(“\033[字背景颜色;字体颜色m 字符串 \033[0m” );</p>
+<p>②主要操作：</p>
+<pre><code>     if(S_ISREG(info_p-&gt;st_mode))
+         printf(RED&quot;%s\n&quot;NONE, filename);
+     if(S_ISDIR(info_p-&gt;st_mode))
+         printf(GREEN&quot;%s\n&quot;NONE, filename);
+     if(S_ISCHR(info_p-&gt;st_mode))
+         printf(BLUE&quot;%s\n&quot;NONE, filename);
+     if(S_ISBLK(info_p-&gt;st_mode))
+         printf(PURPLE&quot;%s\n&quot;NONE, filename);
+     if(S_ISFIFO(info_p-&gt;st_mode))
+         printf(YELLOW&quot;%s\n&quot;NONE, filename);
+     if(S_ISLNK(info_p-&gt;st_mode))
+        printf(WHITE&quot;%s\n&quot;NONE, filename);  </code></pre>
+<h2 id="四、代码清单"><a href="#四、代码清单" class="headerlink" title="四、代码清单"></a>四、代码清单</h2><p>百度网盘：<a target="_blank" rel="noopener" href="https://pan.baidu.com/s/1-HKg6iPW1dx5WOFHamBQqg">https://pan.baidu.com/s/1-HKg6iPW1dx5WOFHamBQqg</a> </p>
+<p>提取码：cqv4</p>
+
       
 
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢老板，老板大气<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/assets/fukuan.jpg">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
       
     </div>
     <div class="article-info article-info-index">
@@ -215,16 +450,75 @@
       
 
       
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/09/08/Linux%E6%96%87%E4%BB%B6%E6%93%8D%E4%BD%9C%E5%91%BD%E4%BB%A4ls%E7%9A%84C%E8%AF%AD%E8%A8%80%E5%AE%9E%E7%8E%B0/">展开全文 >></a>
-        </p>
-      
 
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://example.com/2020/09/08/Linux%E6%96%87%E4%BB%B6%E6%93%8D%E4%BD%9C%E5%91%BD%E4%BB%A4ls%E7%9A%84C%E8%AF%AD%E8%A8%80%E5%AE%9E%E7%8E%B0/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
       
       <div class="clearfix"></div>
     </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
+  
+  
+    <a href="/2020/08/29/giasodgo%E7%9A%84Java%E6%97%A5%E8%AE%B0%E2%80%94%E2%80%942/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">giasodgo的Java日记——2</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
 
 <aside class="wrap-side-operation">
     <div class="mod-side-operation">
@@ -239,265 +533,35 @@
         </div>
         
         
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-giasodgo的Java日记——2" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/08/29/giasodgo%E7%9A%84Java%E6%97%A5%E8%AE%B0%E2%80%94%E2%80%942/">giasodgo的Java日记——2</a>
-    </h1>
-  
-
-
-        <!--显示阅读次数-->
-        
-
-        
-        <a href="/2020/08/29/giasodgo%E7%9A%84Java%E6%97%A5%E8%AE%B0%E2%80%94%E2%80%942/" class="archive-article-date">
-  	<time datetime="2020-08-29T08:31:01.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-08-29</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="第二章-java-基本程序设计结构（一）"><a href="#第二章-java-基本程序设计结构（一）" class="headerlink" title="第二章 java 基本程序设计结构（一）"></a>第二章 java 基本程序设计结构（一）</h1>
-        
-          <a class="article-more-a" href="/2020/08/29/giasodgo%E7%9A%84Java%E6%97%A5%E8%AE%B0%E2%80%94%E2%80%942/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Java</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/Java日记//" class="article-tag-list-link color2">Java日记</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/08/29/giasodgo%E7%9A%84Java%E6%97%A5%E8%AE%B0%E2%80%94%E2%80%942/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Linux%E6%96%87%E4%BB%B6%E6%93%8D%E4%BD%9C%E5%91%BD%E4%BB%A4ls%E7%9A%84C%E8%AF%AD%E8%A8%80%E5%AE%9E%E7%8E%B0%E2%80%94%E2%80%94Linux%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E7%BB%BC%E5%90%88%E8%AE%AD%E7%BB%83"><span class="toc-number">1.</span> <span class="toc-text">Linux文件操作命令ls的C语言实现——Linux程序设计综合训练</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%80%E3%80%81%E7%BB%BC%E5%90%88%E8%AE%AD%E7%BB%83%E7%9B%AE%E7%9A%84%E4%B8%8E%E8%A6%81%E6%B1%82"><span class="toc-number">1.1.</span> <span class="toc-text">一、综合训练目的与要求</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%8C%E3%80%81%E6%80%BB%E4%BD%93%E8%AE%BE%E8%AE%A1%E6%A6%82%E8%BF%B0"><span class="toc-number">1.2.</span> <span class="toc-text">二、总体设计概述</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%89%E3%80%81%E8%AF%A6%E7%BB%86%E8%AE%BE%E8%AE%A1%E8%AF%B4%E6%98%8E"><span class="toc-number">1.3.</span> <span class="toc-text">三、详细设计说明</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-ls-%E2%80%93a%E5%91%BD%E4%BB%A4%EF%BC%9A"><span class="toc-number">1.3.1.</span> <span class="toc-text">(1)ls –a命令：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-ls%E5%91%BD%E4%BB%A4"><span class="toc-number">1.3.2.</span> <span class="toc-text">(2)ls命令</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-ls-%E2%80%93d%E5%91%BD%E4%BB%A4"><span class="toc-number">1.3.3.</span> <span class="toc-text">(3)ls –d命令</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-ls-%E2%80%93al%E5%91%BD%E4%BB%A4"><span class="toc-number">1.3.4.</span> <span class="toc-text">(4)ls –al命令</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-ls-l%E5%91%BD%E4%BB%A4"><span class="toc-number">1.3.5.</span> <span class="toc-text">(5)ls-l命令</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-ls-%E2%80%93i%E5%91%BD%E4%BB%A4"><span class="toc-number">1.3.6.</span> <span class="toc-text">(6) ls –i命令</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7-ls-%E2%80%93full-time%E5%91%BD%E4%BB%A4"><span class="toc-number">1.3.7.</span> <span class="toc-text">(7)ls –full-time命令</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#8-%E6%80%9D%E8%80%83%E9%A2%98%EF%BC%9A%E5%AE%9E%E7%8E%B0%E8%BF%9E%E5%86%99"><span class="toc-number">1.3.8.</span> <span class="toc-text">(8)思考题：实现连写</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#9-%E6%80%9D%E8%80%83%E9%A2%98%EF%BC%9A%E5%AE%9E%E7%8E%B0%E5%AF%B9%E4%B8%8D%E5%90%8C%E7%B1%BB%E5%9E%8B%E7%9A%84%E6%96%87%E4%BB%B6%E8%BF%9B%E8%A1%8C%E4%B8%8D%E5%90%8C%E9%A2%9C%E8%89%B2%E7%9A%84%E8%BE%93%E5%87%BA"><span class="toc-number">1.3.9.</span> <span class="toc-text">(9)思考题：实现对不同类型的文件进行不同颜色的输出</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9B%9B%E3%80%81%E4%BB%A3%E7%A0%81%E6%B8%85%E5%8D%95"><span class="toc-number">1.4.</span> <span class="toc-text">四、代码清单</span></a></li></ol></li></ol>
+                    </div>
+                </span>
             </div>
         </div>
         
-        
     </div>
 </aside>
 
 
 
+  
+  
+  
 
   
-    <article id="post-giasodgo的Java日记——1" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
+
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/08/29/giasodgo%E7%9A%84Java%E6%97%A5%E8%AE%B0%E2%80%94%E2%80%941/">giasodgo的Java日记——1</a>
-    </h1>
+
   
 
 
-        <!--显示阅读次数-->
-        
-
-        
-        <a href="/2020/08/29/giasodgo%E7%9A%84Java%E6%97%A5%E8%AE%B0%E2%80%94%E2%80%941/" class="archive-article-date">
-  	<time datetime="2020-08-29T02:24:25.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-08-29</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="第一章-Java程序设计概述和编程环境的安装"><a href="#第一章-Java程序设计概述和编程环境的安装" class="headerlink" title="第一章 Java程序设计概述和编程环境的安装"></a>第一章 Java程序设计概述和编程环境的安装</h1>
-        
-          <a class="article-more-a" href="/2020/08/29/giasodgo%E7%9A%84Java%E6%97%A5%E8%AE%B0%E2%80%94%E2%80%941/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Java</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/Java日记//" class="article-tag-list-link color2">Java日记</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/08/29/giasodgo%E7%9A%84Java%E6%97%A5%E8%AE%B0%E2%80%94%E2%80%941/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-my-first-demo-blog" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/08/27/my-first-demo-blog/">my first demo blog</a>
-    </h1>
-  
-
-
-        <!--显示阅读次数-->
-        
-
-        
-        <a href="/2020/08/27/my-first-demo-blog/" class="archive-article-date">
-  	<time datetime="2020-08-27T15:09:45.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-08-27</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="我的博客文章编写"><a href="#我的博客文章编写" class="headerlink" title="我的博客文章编写"></a>我的博客文章编写</h1>
-        
-          <a class="article-more-a" href="/2020/08/27/my-first-demo-blog/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/08/27/my-first-demo-blog/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-  
 
 
           </div>
@@ -524,8 +588,8 @@
     <script>
 	var yiliaConfig = {
 		mathjax: false,
-		isHome: true,
-		isPost: false,
+		isHome: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,
