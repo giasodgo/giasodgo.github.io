@@ -15,13 +15,13 @@
 <meta property="og:site_name" content="giasodgo的博客">
 <meta property="og:description" content="Linux文件操作命令ls的C语言实现——Linux程序设计综合训练">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="http://example.com/images/Linux%E6%96%87%E4%BB%B6%E6%93%8D%E4%BD%9C%E5%91%BD%E4%BB%A4ls%E7%9A%84C%E8%AF%AD%E8%A8%80%E5%AE%9E%E7%8E%B0%E2%80%94%E2%80%94p1.png">
+<meta property="og:image" content="http://example.com/images/Linux/Linux%E6%96%87%E4%BB%B6%E6%93%8D%E4%BD%9C%E5%91%BD%E4%BB%A4ls%E7%9A%84C%E8%AF%AD%E8%A8%80%E5%AE%9E%E7%8E%B0%E2%80%94%E2%80%94p1.png">
 <meta property="article:published_time" content="2020-09-08T02:49:25.000Z">
-<meta property="article:modified_time" content="2020-09-08T03:32:56.563Z">
+<meta property="article:modified_time" content="2020-09-08T08:22:18.711Z">
 <meta property="article:author" content="giasodgo">
 <meta property="article:tag" content="Linux">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://example.com/images/Linux%E6%96%87%E4%BB%B6%E6%93%8D%E4%BD%9C%E5%91%BD%E4%BB%A4ls%E7%9A%84C%E8%AF%AD%E8%A8%80%E5%AE%9E%E7%8E%B0%E2%80%94%E2%80%94p1.png">
+<meta name="twitter:image" content="http://example.com/images/Linux/Linux%E6%96%87%E4%BB%B6%E6%93%8D%E4%BD%9C%E5%91%BD%E4%BB%A4ls%E7%9A%84C%E8%AF%AD%E8%A8%80%E5%AE%9E%E7%8E%B0%E2%80%94%E2%80%94p1.png">
   
     <link rel="alternative" href="/atom.xml" title="giasodgo的博客" type="application/atom+xml">
   
@@ -250,13 +250,10 @@ struct  dirent  *  readdir (  DIR  *  dir  ) ;  </code></pre>
 <p>opendir()用来打开参数name 指定的目录, 并返回DIR*形态的目录流</p>
 <p>③思路总结：</p>
 <p>1.打开当前目录的对应的dir文件</p>
-<blockquote>
-<p>DIR* dir_ptr =opendir(“.”);</p>
-</blockquote>
+<pre><code>DIR* dir_ptr =opendir(&quot;.&quot;);</code></pre>
 <p>2.读取当前目录的dir_ptr结构中的文件名并打印；</p>
-<blockquote>
-<p>direntp = readdir(dir_ptr)<br><br>printf(“%s\n”,direntrp-&gt;name);</p>
-</blockquote>
+<pre><code>direntp = readdir(dir_ptr)&lt;br&gt;
+printf(&quot;%s\n&quot;,direntrp-&gt;name);</code></pre>
 <p>3.关闭dir文件</p>
 <p>④主要函数：</p>
 <p>1.Myls（char dirname []）函数：</p>
@@ -305,37 +302,25 @@ struct  dirent  *  readdir (  DIR  *  dir  ) ;  </code></pre>
 <blockquote>
 <p>15-12 位保存文件类型<br><br>11-9 位保存执行文件时设置的信息<br><br>8-0 位保存文件访问权限<br></p>
 </blockquote>
-<p><img src="/images/Linux%E6%96%87%E4%BB%B6%E6%93%8D%E4%BD%9C%E5%91%BD%E4%BB%A4ls%E7%9A%84C%E8%AF%AD%E8%A8%80%E5%AE%9E%E7%8E%B0%E2%80%94%E2%80%94p1.png" alt="alt"></p>
+<p><img src="/images/Linux/Linux%E6%96%87%E4%BB%B6%E6%93%8D%E4%BD%9C%E5%91%BD%E4%BB%A4ls%E7%9A%84C%E8%AF%AD%E8%A8%80%E5%AE%9E%E7%8E%B0%E2%80%94%E2%80%94p1.png" alt="alt"></p>
 <p>由图可知，0-8位存放着该文件或目录的权限，每种用户通过三位的二进制数来表示权限，第三位为1位可读r，第二位为1表示可写w。<br>所以需要将权限为提取出来，对每位的二进制数进行判断，分别对其进行可读可写的赋值</p>
 <p>6.解决问题2</p>
 <p>通过查找发现可以通过uid_to_name()函数和gid_to_name()对用户号和组号进行转化</p>
 <p>7.解决问题3</p>
 <p>通过使用ctime() 函数来得到精确的时间</p>
 <p>③主要函数：</p>
-<blockquote>
-<p>mode_to_letters  (  int  mode  ,  char  str[ ]  )</p>
-</blockquote>
+<pre><code>mode_to_letters  (  int  mode  ,  char  str[ ]  )</code></pre>
 <p>读取st_mode中的10位，通过调用每一位对应的判断函数，来判断这一位的值，并赋予其含义，前八位通过与操作判断其位置上的二进制值，总而给予读写权限。</p>
-<blockquote>
-<p>id_to_name  (  uid_t  uid  )</p>
-</blockquote>
+<pre><code>id_to_name  (  uid_t  uid  )</code></pre>
 <p>通过将getpwuid函数，查找用户uid对应的数据，再通过指针调出其中的用户名</p>
-<blockquote>
-<p>gid_to_name  (  gid_t    gid  )</p>
-</blockquote>
+<pre><code>gid_to_name  (  gid_t    gid  )</code></pre>
 <p>通过将getgrgid()函数，查找用户gid对应的数据，再通过指针调出其中的组名</p>
-<blockquote>
-<p>do_ls  ( char  dirname [  ]  ) </p>
-</blockquote>
+<pre><code>do_ls  ( char  dirname [  ]  ) </code></pre>
 <p>通过opendir操作获得目录指向dir的指针</p>
 <p>将dir结构的指针dir_ptr作为opendir的参数循环获得每个条目.</p>
-<blockquote>
-<p>show_file_info  ( char * filename  ,  struct  stat* info_p )</p>
-</blockquote>
+<pre><code>show_file_info  ( char * filename  ,  struct  stat* info_p )</code></pre>
 <p>调用uid_to_name(), *ctime(), *gid_to_name(), *filemode()并对信息进行输出</p>
-<blockquote>
-<p>Main  (  int  ac , char * av[ ] ) </p>
-</blockquote>
+<pre><code>Main  (  int  ac , char * av[ ] ) </code></pre>
 <p>传参，根据输入目录调用do_ls函数</p>
 <h3 id="5-ls-l命令"><a href="#5-ls-l命令" class="headerlink" title="(5)ls-l命令"></a>(5)ls-l命令</h3><p>①功能：以长格式显示目录下的内容列表。输出的信息从左到右依次包括文件名，文件类型、权限模式、硬连接数、所有者、组、文件大小和文件的最后修改时间等，与al不同的是不输出目录或文件名为“ . ”的文件和目录</p>
 <p>②编写思路：在show_file_info  函数输出是添加判断，对带有“ . ”的目录进行拦截</p>
@@ -511,6 +496,15 @@ int analyzeParam(char* input)&#123;
   
 <nav id="article-nav">
   
+    <a href="/2020/09/08/Java%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95%E6%95%88%E7%8E%87%E6%AF%94%E8%BE%83/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          Java排序算法效率比较
+        
+      </div>
+    </a>
+  
   
     <a href="/2020/08/29/giasodgo%E7%9A%84Java%E6%97%A5%E8%AE%B0%E2%80%94%E2%80%942/" id="article-nav-older" class="article-nav-link-wrap">
       <div class="article-nav-title">giasodgo的Java日记——2</div>
@@ -662,11 +656,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Linux</a>
+                <a href="javascript:void(0)" class="js-tag color5">Java</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">Java</a>
+                <a href="javascript:void(0)" class="js-tag color1">Linux</a>
               </li>
             
             <div class="clearfix"></div>
