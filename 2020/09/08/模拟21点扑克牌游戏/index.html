@@ -6,15 +6,24 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://example.com">
-  <title>Archives | giasodgo的博客</title>
+  <title>模拟21点扑克牌游戏 | giasodgo的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="giasodgo的博客">
-<meta property="og:url" content="http://example.com/archives/index.html">
+  <meta name="description" content="模拟21点扑克牌游戏——分析与设计">
+<meta property="og:type" content="article">
+<meta property="og:title" content="模拟21点扑克牌游戏">
+<meta property="og:url" content="http://example.com/2020/09/08/%E6%A8%A1%E6%8B%9F21%E7%82%B9%E6%89%91%E5%85%8B%E7%89%8C%E6%B8%B8%E6%88%8F/index.html">
 <meta property="og:site_name" content="giasodgo的博客">
+<meta property="og:description" content="模拟21点扑克牌游戏——分析与设计">
 <meta property="og:locale" content="en_US">
+<meta property="og:image" content="http://example.com/images/Java/%E6%A8%A1%E6%8B%9F21%E7%82%B9%E6%89%91%E5%85%8B%E7%89%8C%E6%B8%B8%E6%88%8F%E2%80%94%E2%80%94p1.png">
+<meta property="og:image" content="http://example.com/images/Java/%E6%A8%A1%E6%8B%9F21%E7%82%B9%E6%89%91%E5%85%8B%E7%89%8C%E6%B8%B8%E6%88%8F%E2%80%94%E2%80%94p2.png">
+<meta property="og:image" content="http://example.com/images/Java/%E6%A8%A1%E6%8B%9F21%E7%82%B9%E6%89%91%E5%85%8B%E7%89%8C%E6%B8%B8%E6%88%8F%E2%80%94%E2%80%94p3.png">
+<meta property="article:published_time" content="2020-09-08T09:46:49.000Z">
+<meta property="article:modified_time" content="2020-09-09T01:29:33.138Z">
 <meta property="article:author" content="giasodgo">
+<meta property="article:tag" content="Java">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://example.com/images/Java/%E6%A8%A1%E6%8B%9F21%E7%82%B9%E6%89%91%E5%85%8B%E7%89%8C%E6%B8%B8%E6%88%8F%E2%80%94%E2%80%94p1.png">
   
     <link rel="alternative" href="/atom.xml" title="giasodgo的博客" type="application/atom+xml">
   
@@ -164,36 +173,378 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-模拟21点扑克牌游戏" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2020" class="archive-year">2020</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/09/08/%E6%A8%A1%E6%8B%9F21%E7%82%B9%E6%89%91%E5%85%8B%E7%89%8C%E6%B8%B8%E6%88%8F/" class="archive-article-date">
-  	<time datetime="2020-09-08T09:46:49.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-09-08</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/09/08/%E6%A8%A1%E6%8B%9F21%E7%82%B9%E6%89%91%E5%85%8B%E7%89%8C%E6%B8%B8%E6%88%8F/">模拟21点扑克牌游戏</a>
+    <h1 class="article-title" itemprop="name">
+      模拟21点扑克牌游戏
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
+
+        <!--显示阅读次数-->
+        
+        <br/>
+        <a class="cloud-tie-join-count" href="javascript:void(0);" style="color:gray;font-size:14px;">
+        <span class="icon-sort"></span>
+        <span id="busuanzi_container_page_pv" style="color:#ef7522;font-size:14px;">
+            阅读数: <span id="busuanzi_value_page_pv"></span>次 &nbsp;&nbsp;
+        </span>
+        </a>
+        
+
+        
+        <a href="/2020/09/08/%E6%A8%A1%E6%8B%9F21%E7%82%B9%E6%89%91%E5%85%8B%E7%89%8C%E6%B8%B8%E6%88%8F/" class="archive-article-date">
+  	<time datetime="2020-09-08T09:46:49.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-09-08</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="模拟21点扑克牌游戏——分析与设计"><a href="#模拟21点扑克牌游戏——分析与设计" class="headerlink" title="模拟21点扑克牌游戏——分析与设计"></a>模拟21点扑克牌游戏——分析与设计</h1><a id="more"></a>
+<h2 id="一、设计概述"><a href="#一、设计概述" class="headerlink" title="一、设计概述"></a>一、设计概述</h2><h3 id="设计内容"><a href="#设计内容" class="headerlink" title="设计内容"></a>设计内容</h3><ol>
+<li>模拟黑桃杰克21点游戏与电脑进行对战，如果点数和大于21点则视为“爆点”判负，在不超过21点的情况下与电脑进行点数大小比较，点数大的一方获胜</li>
+<li>要求可以持续进行游戏直到金钱用完</li>
+<li>可以在商店购买道具在游戏中使用，增强游戏趣味性</li>
+</ol>
+<h3 id="设计步骤"><a href="#设计步骤" class="headerlink" title="设计步骤"></a>设计步骤</h3><p>①项目分析阶段：</p>
+<ol>
+<li>需求分析，使用用况模型对需求进行分析</li>
+<li>静态分析，使用类图描述清楚系统所有的类及其关系。</li>
+<li>功能分析，通过思考明白具体需要实现那些功能</li>
+</ol>
+<p>②项目设计阶段：</p>
+<ol>
+<li>流程分析，根据思考完成大致的流程图</li>
+<li>使用java语言进行编码，实现分析阶段需要实现的功能</li>
+<li>测试代码，完成实习报告</li>
+</ol>
+<h2 id="二、分析与设计"><a href="#二、分析与设计" class="headerlink" title="二、分析与设计"></a>二、分析与设计</h2><h3 id="（1）需求分析"><a href="#（1）需求分析" class="headerlink" title="（1）需求分析"></a>（1）需求分析</h3><p><img src="/images/Java/%E6%A8%A1%E6%8B%9F21%E7%82%B9%E6%89%91%E5%85%8B%E7%89%8C%E6%B8%B8%E6%88%8F%E2%80%94%E2%80%94p1.png" alt="tar"></p>
+<h3 id="用例分析描述："><a href="#用例分析描述：" class="headerlink" title="用例分析描述："></a>用例分析描述：</h3><p>1.用例名：购买商品</p>
+<blockquote>
+<p>简要描述：玩家可以通过菜单栏的商店购买荣誉道具和加注道具<br><br>前置条件：玩家可以在任何时间打开商店购买荣誉道具，而加注道具只能在玩家接牌结束前购买<br><br>基本事件：</p>
+<ol>
+<li>购买荣誉道具，在退出时可以显示目前的段位</li>
+<li>购买加注道具，得到赌注加倍的效果    <p>后置条件：</p>
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp1. 在结算游戏时会根据是否购买加注道具产生不一样的倍率<br>
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp2. 在退出游戏时，会根据自己购买的段位输出段位
+</li>
+</ol>
+</blockquote>
+<p>2.用例名：开始游戏</p>
+<blockquote>
+<p>简要描述：玩家通过点击开始游戏的按钮后，通知牌库进行更新界面和牌库的操作<br><br>前置条件：一局游戏结束后，宣布下一轮游戏开始前，并且需要在下注区里下注<br><br>基本事件：</p>
+<ol>
+<li>下注：玩家对本轮游戏进行下注</li>
+<li>更新界面：删除隐藏界面上现有的牌</li>
+<li>更新牌库：将牌库更新  <p>后置条件：为之后发牌员发牌做准备</p>
+</li>
+</ol>
+</blockquote>
+<p>3.用例名：请求发牌</p>
+<blockquote>
+<p>简要描述：玩家在声明游戏开始后，可以向发牌员要牌，游戏记录玩家的点数大小，玩家可以根据自己已有手牌的大小选择是否继续要牌，并且在商店里选择是否加注<br><br>前置条件：玩家点击游戏开始按钮后<br><br>基本事件：发牌员发牌给玩家<br><br>其他事件：玩家可以在商店里选择是否购买道具，如果购买则在界面上显示加注的大小<br><br>后置条件：记录玩家的获胜条件，为结算环节做准备</p>
+</blockquote>
+<p>4.用例名：结束发牌</p>
+<blockquote>
+<p>简要描述：玩家在收到一定的牌后，点击结束按钮表示自己回合结束，此时系统将自动开始电脑的发牌、记录以及显示玩家的一些状态<br><br>前置条件：玩家收到满意的牌之后<br><br>基本事件：电脑自动接牌<br><br>其他事件：如果玩家拥有黑桃杰克，则在界面上显示黑桃杰克标志<br><br>后置条件：记录电脑的获胜条件，为结算环节做准备</p>
+</blockquote>
+<p>5.用例名：结算游戏结果</p>
+<blockquote>
+<p>简要描述：系统根据玩家和电脑抽的牌进行判定，并宣布哪方获胜<br><br>前置条件：玩家和电脑的完成了接牌环节<br><br>基本事件：①总结玩家和电脑的数据②判断输赢<br><br>后置条件：根据判断的输赢，增减玩家的前述</p>
+</blockquote>
+<p>6.用例名：购买加注道具</p>
+<blockquote>
+<p>简要描述：加注道具分为加倍和超级加倍两种，加注道具主要影响结算时赌注的倍率<br><br>前置条件：玩家接到牌后，酌情考虑后选择是否购买<br><br>基本事件：①购买后，界面上会显示购买的加倍种类②购买后，游戏会在后台做记录，并在最后结算时用到</p>
+</blockquote>
+<p>7.用例名：购买荣誉道具</p>
+<blockquote>
+<p>简要描述：荣誉分为七个段位，玩家通过自己前述的多少可以选择相对应的段位，在最后退出时游戏会根据玩家的段位显示结果<br><br>前置条件：玩家在前述够的情况下可以购买<br><br>基本事件：购买后在界面上显示玩家此时的段位<br><br>后置条件：在退出游戏时显示玩家的段位</p>
+</blockquote>
+<p>8.用例名：玩家结算</p>
+<blockquote>
+<p>简要描述：游戏在后台自动收集玩家的点数、黑桃杰克等数据，为判断输赢时做准备<br><br>前置条件：在玩家结束发牌时<br><br>基本事件：记录玩家游戏数据<br><br>后置条件：为判断输赢时提供数据</p>
+</blockquote>
+<p>9.用例名：电脑结算</p>
+<blockquote>
+<p>简要描述：游戏给电脑发牌后，自动收集电脑的点数数据，为判断输赢做准备<br><br>前置条件：在电脑结束发牌后<br><br>基本事件：记录电脑游戏数据<br><br>后置条件：为判断输赢时提供数据</p>
+</blockquote>
+<p>10.用例名：判断输赢</p>
+<blockquote>
+<p>简要描述：根据提供的玩家数据和电脑数据，判断哪一方胜利<br><br>前置条件：在玩家和电脑都发牌完毕后<br><br>基本事件：判断输赢并显示到界面上，根据胜负增减玩家的金钱</p>
+</blockquote>
+<p>11.用例名：电脑发牌</p>
+<blockquote>
+<p>简要描述：电脑根据一定的规则自动选择是否接牌<br><br>前置条件：玩家接牌完毕后点击结束按钮<br><br>基本事件：电脑接牌并显示到界面上<br></p>
+</blockquote>
+<p>12.用例名：洗牌</p>
+<blockquote>
+<p>简要描述后：每次发牌后，游戏会生成一个随机数来指向不同的牌，一次代替洗牌效果<br><br>前置条件：玩家点击发牌按钮<br><br>基本事件：从牌堆里找到一个新的牌并准备使用<br></p>
+</blockquote>
+<p>13.用例名：玩家抽牌</p>
+<blockquote>
+<p>简要描述：玩家点击抽牌后，电脑将准备好的牌显示到界面上，代表为玩家抽的新牌<br><br>前置条件：玩家点击发牌按钮<br><br>基本事件：牌堆将牌显示到界面上</p>
+</blockquote>
+<p>14.用例名：更新牌库</p>
+<blockquote>
+<p>简要描述：每局游戏结束后，玩家通过再次点击开始按钮进入一个新的游戏，并且将牌堆里的牌全部变为可用状态<br><br>前置条件：一轮游戏结束后点击开始游戏按钮<br><br>基本事件：将牌堆里的牌全部变为可用状态</p>
+</blockquote>
+<p>15.用例名：更新界面</p>
+<blockquote>
+<p>简要描述：每局游戏结束后，玩家通过再次点击开始按钮进入一个新的游戏，并隐藏界面上显示的上一局的一些标记<br><br>前置条件：一轮游戏结束后点击开始游戏按钮<br><br>基本事件：隐藏界面中上一局的一些标签 <br> </p>
+</blockquote>
+<hr>
+<br>
+
+<h3 id="（2）静态分析"><a href="#（2）静态分析" class="headerlink" title="（2）静态分析"></a>（2）静态分析</h3><p><img src="/images/Java/%E6%A8%A1%E6%8B%9F21%E7%82%B9%E6%89%91%E5%85%8B%E7%89%8C%E6%B8%B8%E6%88%8F%E2%80%94%E2%80%94p2.png" alt="tar"></p>
+<h3 id="类图分析概述："><a href="#类图分析概述：" class="headerlink" title="类图分析概述："></a>类图分析概述：</h3><p>类说明：</p>
+<p>MyBlackJack——主类:调用BJframe类生成界面</p>
+<p>BJFrame——界面操作类:界面类，包含了实现所有游戏功能的类</p>
+<p>CardHeap——发牌类实体类，包含了所有与牌、发牌有关的方法，供界面类调用</p>
+<p>Rule——裁判类:实体类，包含了所有与胜利有关的数据、判断的方法，供界面类调用</p>
+<blockquote>
+<p>具体关系：MyBlackJack调用BJFrame类的构造函数，实现界面的形成，通过点击界面上的按钮，触发BJFrame类中的监听事件，监听方法通过继承、调用CardHeap类、Rule类中的方法实现具体的功能</p>
+</blockquote>
+<p><strong>MyBlackJack：</strong></p>
+<pre><code>  属性：无
+  方法：BJFrame（）:BJFrame
+  概述：使用main方法调用BJFrame界面类的构造函数，让界面出现</code></pre>
+<p><strong>BJFrame类：</strong></p>
+<pre><code>  属性
+1.属性名：Usery : private int
+  功能：扑克牌显示区域的参数
+  简述：用于电脑玩家显示扑克牌的坐标参数，让扑克牌显示到具体的位置
+
+2.属性名：Userz ：private int
+  功能:  扑克牌显示区域的参数
+      简述：用于用户玩家显示扑克牌的坐标参数，让扑克牌显示到具体的位置
+
+3.属性名：ch ：privat CardHeap
+  功能：用于调用CardHeap类中的方法
+      简述：CardHeap类的声明对象
+
+4.属性名：r1：private Rule
+  功能:用于调用Rule类中的方法
+  简述：Rule类的声明对象
+
+5.属性名：r2：private Rule
+  功能:用于调用Rule类中的方法
+  简述：Rule类的声明对象
+
+6.属性名：r3：private Rule
+  功能:用于调用Rule类中的方法
+  简述：Rule类的声明对象
+
+7.属性名：usernumber：private int
+  功能：用户玩家抽牌的点数
+  简述：用户玩家每次选择抽牌，都会产生一个新的点数，将这个点数赋给usernumber
+
+8.属性名：usernum：private int
+  功能：每局游戏用户玩家的总点数
+  简述：用户每次抽卡，都会获得一个新的usernumber，将usernumber的和赋给usernum，用于比较点数和
+
+9.属性名：computernumber：private int
+  功能：电脑玩家抽牌的点数
+  简述：电脑玩家每次抽牌，都会产生一个新的点数，将这个点数赋给comuternumber
+
+10.属性名：computernum：private int
+   功能：每局游戏用户玩家的总点数
+   简述：用户每次抽卡，都会获得一个新的computernumber，将computernumber的和赋给computernum，用于比较点数和
+
+11.属性名：flag1：private int
+   功能：用于判断电脑玩家是否继续接牌
+   简述：由于电脑是自动接牌的，所以需要有一个参数在循环中来判断它是否接牌
+
+12.属性名：flag2:private int
+   功能：用于判断界面上是否购买过商店里的加倍功能
+   简述：通过flag2可以让游戏知道是否显示过加倍功能，方便更新界面时更新加倍功能
+
+13.属性名：flag3:privat int
+   功能：用于判断界面上是否购买过荣誉功能
+   简述：通过flag3可以记录玩家是否买过荣誉功能，方便再次购买时对原有荣誉进行更新
+
+14.属性名：vict：private int
+   功能：判断玩家是否胜利
+   简述：初始值为3，玩家胜利则赋值为1，否则赋值为0
+
+15.属性名：bet：private int
+   功能：记录玩家下注的大小
+   简述：初始值为0，游戏会记录玩家在下注文本框中的数字，来作为赌注，用于结算时
+
+16.属性名：relbet ：private int
+   功能:结算时，用于记录真实的赌注大小
+   简述：初始值为0，当获胜时为赌注的整数，反之则为赌注的负数
+
+17.属性值：money：private int
+   功能：用于记录玩家目前拥有的金钱多少
+   简述：初始值为游戏开始时的金额
+
+18.属性值：honor：private int
+   功能：用于记录你的荣誉等级
+   简述：一共0-7个等级，在退出游戏时，会根据荣誉等级来输出你的段位
+
+19.属性值：doublebet：private int
+   功能：用于记录赌注的倍率
+   简述：商店的加倍道具和黑桃节课都会影响倍率
+
+  方法：
+
+方法名：BJFrame():public BJFrame
+ 简述：BJFrame类的构造函数，用于界面的生成，为一些监听事件充当基地</code></pre>
+<p><strong>CardHeap类</strong></p>
+<pre><code>  属性：
+1.属性名：Type：private int
+  功能:记录花色
+  简述：1代表黑桃，2代表洪涛，3代表梅花，4代表方片
+
+2.属性名：Number：private int
+  功能：记录点数
+      简述：1-13分别对应着A-K
+
+3.属性名：path：private String
+  功能：记录扑克牌图片的地址
+      简述：用Type-Number的形式标记图片，在抽到不同图片是选用不一样的图片
+
+4.属性名：a：private int[]
+  功能：记录扑克牌是否使用过
+  简述：每局游戏每张扑克牌只能使用一次，开始时将每一张牌做标记为1，如果使用了就标记0，从而在抽牌时判断是否使用过该扑克牌
+
+5.属性名：blackA：private int
+  功能：用于记录黑桃杰克中是否有A牌
+      简述：黑桃杰克需要同时拥有A和JQK牌
+
+5.属性名：blackJ：private int
+  功能：用于记录黑桃杰克中是否有J牌
+      简述：黑桃杰克需要同时拥有A和JQK牌
+
+
+  方法：
+1.方法名：CardHeap()：public CardHeap
+    功能：更新牌库
+      使用属性： a：private int[]
+  简述：通过循环遍历，将每个值都赋成1,即全都没使用过
+
+2.方法名：Card(int x ,int y)：public void
+  功能：生成抽出卡牌的图片地址、记录是否为黑桃杰克
+  简述：通过随机数产生的x、y，对应出卡牌，如果使用过则重新筛选随机数，未使用过则赋值图片的路径
+  使用属性：Type  NUmber  a[]  blackA  blackJ  path
+
+3.方法名：getPath()：public String
+  功能：返回卡牌的图片路径
+  简述：通过对象，调用path来生成路径，用于把扑克牌显示到界面上
+      使用属性：path
+
+4.方法名：getNumber():private int
+  功能：返回卡牌的点数值
+  简述：返回生成卡牌的点数之，用于计算点数和
+      使用属性：Number
+
+5.方法名：getBlackA():private int 
+       功能：抽到的卡牌中是否具有A点数的牌
+   简述：如果有则返回1,反之则返回0，之后根据判断是否为黑桃杰克
+   使用属性：blackA
+
+6.方法名：getBlackJ():private int 
+       功能：抽到的卡牌中是否具有JQK点数的牌
+   简述：如果有则返回1,反之则返回0，之后根据判断是否为黑桃杰克
+   使用属性：blackJ</code></pre>
+<p><strong>Rule</strong></p>
+<pre><code>  方法
+1.方法名：Rule()：public Rule
+  功能：大于10的点数一律按10点算
+  简述：此为黑桃杰克21点的游戏规则，JQK的点数按10点算
+  操作
+
+2.方法名：numberCheck(int y):public void
+  功能：用于提醒玩家点数
+  操作：如果超过21点则直接提示玩家游戏结束，直接查看游戏结果
+            如果未超过21点且大于15.则提醒玩家慎重接牌
+
+ 3.方法名：computerCheck（int y）：public int
+  功能：电脑判断是否继续抽牌
+      操作：如果点数大于16点，则不选择抽牌
+            如果小于16点则继续抽牌
+
+4.方法名：checkBoom(int y):public int 
+  功能：判断是否爆点
+      操作：如果大于21点则返回1代表爆点，反之代表未爆点
+
+5.方法名：victory(int Boom1,int Boom2,int num1,int num2):public int 
+  功能：判断是否胜利
+  操作：判断条件有两个，先判断是否爆点，爆点则直接判断是否胜利
+            如果未爆点则判断点数的大小
+
+6.方法名：end(int x,int y,int z,int d)：public int
+  功能：根据输赢显示不同的提示框
+      操作：影响因素有加倍、黑桃杰克、和赌注，根据这三个参数的大小输出不一样的结果
+
+7.方法名：setHonor(int honor)：public int
+  功能：退出时根据荣誉大小显示不一样的提示框
+
+8.方法名：bankruptcy(int m)：public int
+    功能：如果余额小于等于0则提示破产，退出游戏重新开始</code></pre>
+<h2 id="三、详细设计说明"><a href="#三、详细设计说明" class="headerlink" title="三、详细设计说明"></a>三、详细设计说明</h2><h3 id="（1）功能分析："><a href="#（1）功能分析：" class="headerlink" title="（1）功能分析："></a>（1）功能分析：</h3><p><strong>主要功能</strong></p>
+<p>1.程序启动后会打开一个界面，通过在界面上操作，来完成功能</p>
+<p>2.作为纸牌类型的游戏，我需要一个“发牌员”来为玩家发牌</p>
+<p>3.玩家根据自己的需求来判断是否继续接牌，而电脑玩家则需要自动进行接牌并且判断合适停止接牌</p>
+<p>4.需要记录黑桃杰克的判断条件，以及玩家的点数，为最后的胜负做准备</p>
+<p>5.需要一个“裁判”，来判断游戏的胜负</p>
+<p>6.每局游戏结束后，需要更新牌堆、界面和玩家的金钱</p>
+<p><strong>附加功能：</strong></p>
+<p>1.建立一个菜单栏实现一些帮助功能</p>
+<p>2.建立一个商店，可以在里面购买道具，提高游戏趣味性</p>
+<h3 id="（2）流程分析与流程图"><a href="#（2）流程分析与流程图" class="headerlink" title="（2）流程分析与流程图"></a>（2）流程分析与流程图</h3><p><img src="/images/Java/%E6%A8%A1%E6%8B%9F21%E7%82%B9%E6%89%91%E5%85%8B%E7%89%8C%E6%B8%B8%E6%88%8F%E2%80%94%E2%80%94p3.png" alt="tar"></p>
+<p>1.玩家在下注文本框中写入赌注的数字，并点击下注按钮进行下注</p>
+<p>2.玩家点击重新开是按钮正式开始游戏，第一次点击按会初始化牌库，以后点击不仅会初始化牌库而且会初始化一些页面上的信息</p>
+<p>3.玩家点击发牌按钮，系统会自动给玩家一张牌显示在界面上，并记录牌的点数，玩家可以根据自己的想法再次点击发牌按钮再要一张牌，知道玩家不要牌为止</p>
+<p>4.玩家点击结束按钮表示玩家接牌结束，电脑玩家开始自动接牌，电脑会将自动接的牌打印到界面上，后台会记录电脑的点数</p>
+<p>5.玩家点击查看游戏结果按钮，如果双方出现“爆点”情况，则直接判对方胜利，否则根据已经记录好的点数通过比大小方式来判断胜利，如果玩家胜利则增加金钱，反之减少金钱</p>
+<p>6.一轮游戏结束后，如果玩家金钱未到0，则可以继续进行游戏，重复1-5步骤即可</p>
+<h3 id="（3）程序设计（具体代码见文件）"><a href="#（3）程序设计（具体代码见文件）" class="headerlink" title="（3）程序设计（具体代码见文件）"></a>（3）程序设计（具体代码见文件）</h3><p>一共建立4个类</p>
+<p>①BJFrame（界面操作类）——用来完成游戏的界面功能和监听事件</p>
+<p>②CardHeap（发牌员类）——用来完成更新牌库、发牌等操作</p>
+<p>③Rule（裁判类）——用来判断胜负、弹出一些提示窗口等操作</p>
+<p>④主类：用于打开界面</p>
+<h2 id="四、代码分享"><a href="#四、代码分享" class="headerlink" title="四、代码分享"></a>四、代码分享</h2><p>链接：<a target="_blank" rel="noopener" href="https://pan.baidu.com/s/10siDHYpme6socdpcEDqCGg">https://pan.baidu.com/s/10siDHYpme6socdpcEDqCGg</a> </p>
+<p>提取码：dqyx</p>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢老板，老板大气<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/assets/fukuan.jpg">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -205,7 +556,7 @@
 		</ul>
 	</div>
 
-          
+      
 	<div class="article-category tagcloud">
 		<i class="icon-book icon"></i>
 		<ul class="article-tag-list">
@@ -218,327 +569,119 @@
 	</div>
 
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://example.com/2020/09/08/%E6%A8%A1%E6%8B%9F21%E7%82%B9%E6%89%91%E5%85%8B%E7%89%8C%E6%B8%B8%E6%88%8F/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/09/08/web%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E2%80%94%E2%80%94CSS/" class="archive-article-date">
-  	<time datetime="2020-09-08T08:56:26.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-09-08</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2020/09/08/web%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E2%80%94%E2%80%94CSS/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">web学习笔记——CSS</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/09/08/web%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E2%80%94%E2%80%94CSS/">web学习笔记——CSS</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">web</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/CSS//" class="article-tag-list-link color4">CSS</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
+        
+        
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%A8%A1%E6%8B%9F21%E7%82%B9%E6%89%91%E5%85%8B%E7%89%8C%E6%B8%B8%E6%88%8F%E2%80%94%E2%80%94%E5%88%86%E6%9E%90%E4%B8%8E%E8%AE%BE%E8%AE%A1"><span class="toc-number">1.</span> <span class="toc-text">模拟21点扑克牌游戏——分析与设计</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%80%E3%80%81%E8%AE%BE%E8%AE%A1%E6%A6%82%E8%BF%B0"><span class="toc-number">1.1.</span> <span class="toc-text">一、设计概述</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%AE%BE%E8%AE%A1%E5%86%85%E5%AE%B9"><span class="toc-number">1.1.1.</span> <span class="toc-text">设计内容</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%AE%BE%E8%AE%A1%E6%AD%A5%E9%AA%A4"><span class="toc-number">1.1.2.</span> <span class="toc-text">设计步骤</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%8C%E3%80%81%E5%88%86%E6%9E%90%E4%B8%8E%E8%AE%BE%E8%AE%A1"><span class="toc-number">1.2.</span> <span class="toc-text">二、分析与设计</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%EF%BC%881%EF%BC%89%E9%9C%80%E6%B1%82%E5%88%86%E6%9E%90"><span class="toc-number">1.2.1.</span> <span class="toc-text">（1）需求分析</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%94%A8%E4%BE%8B%E5%88%86%E6%9E%90%E6%8F%8F%E8%BF%B0%EF%BC%9A"><span class="toc-number">1.2.2.</span> <span class="toc-text">用例分析描述：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%EF%BC%882%EF%BC%89%E9%9D%99%E6%80%81%E5%88%86%E6%9E%90"><span class="toc-number">1.2.3.</span> <span class="toc-text">（2）静态分析</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%B1%BB%E5%9B%BE%E5%88%86%E6%9E%90%E6%A6%82%E8%BF%B0%EF%BC%9A"><span class="toc-number">1.2.4.</span> <span class="toc-text">类图分析概述：</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%89%E3%80%81%E8%AF%A6%E7%BB%86%E8%AE%BE%E8%AE%A1%E8%AF%B4%E6%98%8E"><span class="toc-number">1.3.</span> <span class="toc-text">三、详细设计说明</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%EF%BC%881%EF%BC%89%E5%8A%9F%E8%83%BD%E5%88%86%E6%9E%90%EF%BC%9A"><span class="toc-number">1.3.1.</span> <span class="toc-text">（1）功能分析：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%EF%BC%882%EF%BC%89%E6%B5%81%E7%A8%8B%E5%88%86%E6%9E%90%E4%B8%8E%E6%B5%81%E7%A8%8B%E5%9B%BE"><span class="toc-number">1.3.2.</span> <span class="toc-text">（2）流程分析与流程图</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%EF%BC%883%EF%BC%89%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%EF%BC%88%E5%85%B7%E4%BD%93%E4%BB%A3%E7%A0%81%E8%A7%81%E6%96%87%E4%BB%B6%EF%BC%89"><span class="toc-number">1.3.3.</span> <span class="toc-text">（3）程序设计（具体代码见文件）</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9B%9B%E3%80%81%E4%BB%A3%E7%A0%81%E5%88%86%E4%BA%AB"><span class="toc-number">1.4.</span> <span class="toc-text">四、代码分享</span></a></li></ol></li></ol>
+                    </div>
+                </span>
+            </div>
         </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/09/08/web%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E2%80%94%E2%80%94HTML/" class="archive-article-date">
-  	<time datetime="2020-09-08T08:41:27.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-09-08</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/09/08/web%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E2%80%94%E2%80%94HTML/">web学习笔记——HTML</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">web</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/HTML//" class="article-tag-list-link color5">HTML</a>
-        		</li>
-      		
-		</ul>
-	</div>
+        
+    </div>
+</aside>
 
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/09/08/Java%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95%E6%95%88%E7%8E%87%E6%AF%94%E8%BE%83/" class="archive-article-date">
-  	<time datetime="2020-09-08T08:03:51.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-09-08</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/09/08/Java%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95%E6%95%88%E7%8E%87%E6%AF%94%E8%BE%83/">Java排序算法效率比较</a>
-    </h1>
-  
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Java</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/数据结构//" class="article-tag-list-link color5">数据结构</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/09/08/Linux%E6%96%87%E4%BB%B6%E6%93%8D%E4%BD%9C%E5%91%BD%E4%BB%A4ls%E7%9A%84C%E8%AF%AD%E8%A8%80%E5%AE%9E%E7%8E%B0/" class="archive-article-date">
-  	<time datetime="2020-09-08T02:49:25.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-09-08</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/09/08/Linux%E6%96%87%E4%BB%B6%E6%93%8D%E4%BD%9C%E5%91%BD%E4%BB%A4ls%E7%9A%84C%E8%AF%AD%E8%A8%80%E5%AE%9E%E7%8E%B0/">Linux文件操作命令ls的C语言实现</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Linux</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/08/29/giasodgo%E7%9A%84Java%E6%97%A5%E8%AE%B0%E2%80%94%E2%80%942/" class="archive-article-date">
-  	<time datetime="2020-08-29T08:31:01.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-08-29</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/08/29/giasodgo%E7%9A%84Java%E6%97%A5%E8%AE%B0%E2%80%94%E2%80%942/">giasodgo的Java日记——2</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Java</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/Java日记//" class="article-tag-list-link color2">Java日记</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/08/29/giasodgo%E7%9A%84Java%E6%97%A5%E8%AE%B0%E2%80%94%E2%80%941/" class="archive-article-date">
-  	<time datetime="2020-08-29T02:24:25.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-08-29</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/08/29/giasodgo%E7%9A%84Java%E6%97%A5%E8%AE%B0%E2%80%94%E2%80%941/">giasodgo的Java日记——1</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Java</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/Java日记//" class="article-tag-list-link color2">Java日记</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/08/27/my-first-demo-blog/" class="archive-article-date">
-  	<time datetime="2020-08-27T15:09:45.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-08-27</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/08/27/my-first-demo-blog/">my first demo blog</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
   
   
-    </div></section>
   
 
-    
+  
+
+  
+
+  
+
+
 
 
           </div>
@@ -566,8 +709,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
