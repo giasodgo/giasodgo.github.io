@@ -6,14 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://example.com">
-  <title>giasodgo的博客</title>
+  <title>giasodgo的Java日记——3 | giasodgo的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="giasodgo的博客">
-<meta property="og:url" content="http://example.com/index.html">
+  <meta name="description" content="第二章 java 基本程序设计结构（二）">
+<meta property="og:type" content="article">
+<meta property="og:title" content="giasodgo的Java日记——3">
+<meta property="og:url" content="http://example.com/2020/09/10/giasodgo%E7%9A%84Java%E6%97%A5%E8%AE%B0%E2%80%94%E2%80%943/index.html">
 <meta property="og:site_name" content="giasodgo的博客">
+<meta property="og:description" content="第二章 java 基本程序设计结构（二）">
 <meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2020-09-10T10:36:15.000Z">
+<meta property="article:modified_time" content="2020-09-11T01:10:43.181Z">
 <meta property="article:author" content="giasodgo">
+<meta property="article:tag" content="Java">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="giasodgo的博客" type="application/atom+xml">
@@ -164,21 +169,27 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-    <article id="post-giasodgo的Java日记——3" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+            <article id="post-giasodgo的Java日记——3" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/09/10/giasodgo%E7%9A%84Java%E6%97%A5%E8%AE%B0%E2%80%94%E2%80%943/">giasodgo的Java日记——3</a>
+    <h1 class="article-title" itemprop="name">
+      giasodgo的Java日记——3
     </h1>
   
 
 
         <!--显示阅读次数-->
+        
+        <br/>
+        <a class="cloud-tie-join-count" href="javascript:void(0);" style="color:gray;font-size:14px;">
+        <span class="icon-sort"></span>
+        <span id="busuanzi_container_page_pv" style="color:#ef7522;font-size:14px;">
+            阅读数: <span id="busuanzi_value_page_pv"></span>次 &nbsp;&nbsp;
+        </span>
+        </a>
         
 
         
@@ -190,12 +201,151 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="第二章-java-基本程序设计结构（二）"><a href="#第二章-java-基本程序设计结构（二）" class="headerlink" title="第二章 java 基本程序设计结构（二）"></a>第二章 java 基本程序设计结构（二）</h1>
-        
-          <a class="article-more-a" href="/2020/09/10/giasodgo%E7%9A%84Java%E6%97%A5%E8%AE%B0%E2%80%94%E2%80%943/#more">more >></a>
-        
+        <h1 id="第二章-java-基本程序设计结构（二）"><a href="#第二章-java-基本程序设计结构（二）" class="headerlink" title="第二章 java 基本程序设计结构（二）"></a>第二章 java 基本程序设计结构（二）</h1><a id="more"></a>
+<h2 id="2-6-字符串"><a href="#2-6-字符串" class="headerlink" title="2.6 字符串"></a>2.6 字符串</h2><h3 id="2-6-1-子串"><a href="#2-6-1-子串" class="headerlink" title="2.6.1 子串"></a>2.6.1 子串</h3><p>定义一个字符串str=”hello”,那么我们可以使用String类的substring方法来提取一个str的子串，例：</p>
+<pre><code>String str = &quot;hello&quot;;
+String s = str.substtring(0,3)// s = &quot;hel&quot; 为 Str 的一个子串</code></pre>
+<p>其中substring方法有两个参数，其中第一个为起始位置，第二个为结束为止，注意的是该方法的起始是从0开始计算的，且结束时不包括终止位置。substring(a,b)方法的优点是能够清楚的知道截取的子串的长度，即b-a</p>
+<h3 id="2-6-2拼接"><a href="#2-6-2拼接" class="headerlink" title="2.6.2拼接"></a>2.6.2拼接</h3><p>Java允许两个字符串通过 + 号来连接两个String类型的字符串，例：</p>
+<pre><code>String a = &quot;hello&quot;;
+String b = &quot;world&quot;;
+string c = a+b; // c=&quot;helloworld&quot;</code></pre>
+<p>*当一个字符串和一个非字符串的值进行拼接时，后者会转换成字符串</p>
+<h3 id="2-6-3-检测字符串是否等同"><a href="#2-6-3-检测字符串是否等同" class="headerlink" title="2.6.3 检测字符串是否等同"></a>2.6.3 检测字符串是否等同</h3><p>使用equals方法来检测两个字符串是否相等，公式为：s.equals(t)。如果字符串s和字符串t相等，则会返回true，否则返回false</p>
+<blockquote>
+<p>equal是区分大小写的，如果不区分大小写可以使用equalsIgnoreCase方法</p>
+</blockquote>
+<p>注意一定不要使用”==”符号累检测字符串是否等同，他只能判断其地址是否相同</p>
+<h3 id="2-6-4-空串和Null串"><a href="#2-6-4-空串和Null串" class="headerlink" title="2.6.4 空串和Null串"></a>2.6.4 空串和Null串</h3><p>空串””是长度为0的字符串，它有自己的长度(0)和内容(空)，是一个Java对象</p>
+<p>null目前没有任何对象与之关联，且不含有任何的意义</p>
+<h2 id="2-7-输入输出"><a href="#2-7-输入输出" class="headerlink" title="2.7 输入输出"></a>2.7 输入输出</h2><h3 id="2-7-1-读取输入"><a href="#2-7-1-读取输入" class="headerlink" title="2.7.1 读取输入"></a>2.7.1 读取输入</h3><p>要想通过控制台进行输入，首先要构造一个Scanner对象，并与“标准输入流”System.in关联</p>
+<pre><code>Scanner sc = new Scanner(System.in);//创建的Scanner对象sc ，可以实现Scanner类中的方法
+int a = sc.nextInt(); //从控制台输入一个int类型的整数赋值给a
+next()——读取一个单词，以空格为分隔符
+nextInt()——读取一个int类型的整数
+nextDouble()——读取一个double类型的浮点数</code></pre>
+<p>当然如果要是用Scanner类，需要将其所在的包导入到程序的开头</p>
+<pre><code>import java.util.Scanner;</code></pre>
+<h3 id="2-7-2-格式化输出"><a href="#2-7-2-格式化输出" class="headerlink" title="2.7.2 格式化输出"></a>2.7.2 格式化输出</h3><p>之前我们知道，可以通过System.out.print(x)方法将x输出到控制台上，x可以是任意类型，因为该方法具有多种重载方法，根据x的不同类型，会调用不同的方法</p>
+<h3 id="2-7-3-文件输入输出"><a href="#2-7-3-文件输入输出" class="headerlink" title="2.7.3 文件输入输出"></a>2.7.3 文件输入输出</h3><p>文件读取需要用File对象构造一个Scanner对象</p>
+<pre><code>Scanner in = new Scanner(Path.get(文件路径),&quot;文件格式&quot;);</code></pre>
+<p>想要写入晚间，就需要构造一个PrintWriter对象</p>
+<pre><code>PrintWriter out = new PrintWriter(文件路径，文件格式)//如果文件不存在则创建文件，然后进行写入</code></pre>
+<h2 id="2-8-流程控制"><a href="#2-8-流程控制" class="headerlink" title="2.8 流程控制"></a>2.8 流程控制</h2><h3 id="2-8-1-块作用域"><a href="#2-8-1-块作用域" class="headerlink" title="2.8.1 块作用域"></a>2.8.1 块作用域</h3><p>块是指由一对大括号括起来的若干语句，其中在块中定义的变量只能够在块中起作用</p>
+<pre><code>public static void main(String args[])&#123;
+    int a=0;
+    int b=1;
+    int d=3;
+    &#123;
+        int c =2；
+        int d = 3；//错误，在块内已经定义过d了
+        System.out.println(a);//输出a为0
+        System.out.println(c);//输出c为2
+        System.out.println(d);//输出d为3
+    &#125;
+    System.out.println(a);//输出a为0
+    System.out.println(b);//输出b为1
+    System.out.println(c);//错误，块内未定义c
+&#125;</code></pre>
+<h3 id="2-8-2-条件语句"><a href="#2-8-2-条件语句" class="headerlink" title="2.8.2 条件语句"></a>2.8.2 条件语句</h3><p>条件语句的格式为：</p>
+<pre><code>if(判断条件)&#123;  
+    判断正确后执行的语句
+&#125;
+else&#123;       //可有可无
+    判断错误后执行的语句
+&#125;
+
+else自动与最近的if组合构成一组if-else语句，共同建立一个条件语句</code></pre>
+<h3 id="2-8-3-循环"><a href="#2-8-3-循环" class="headerlink" title="2.8.3 循环"></a>2.8.3 循环</h3><p>while循环：</p>
+<pre><code>while（循环条件）&#123;   //条件为真则继续循环，否则退出循环
+    语句
+&#125;</code></pre>
+<p>do while循环：</p>
+<pre><code>do&#123;
+    语句
+&#125;while(循环条件)  //条件为真则继续循环，否则退出循环</code></pre>
+<blockquote>
+<p>do-while与while不同的地方在于，前者无条件执行一次后才开始循环，而后者直接判断是否循环</p>
+</blockquote>
+<p>for循环：</p>
+<pre><code>for(int i =1 ; i&lt;=10;i++)&#123;  //循环十次
+       语句
+&#125;</code></pre>
+<blockquote>
+<p>for语句是一种确定迭代次数的循环，循环的次数事先可知。其中定义的变量i只在for后边的大括号内有小</p>
+</blockquote>
+<h3 id="2-8-4-多重选择——switch语句"><a href="#2-8-4-多重选择——switch语句" class="headerlink" title="2.8.4 多重选择——switch语句"></a>2.8.4 多重选择——switch语句</h3><pre><code>switch(choice)&#123;
+    case 1:         
+        语句1;
+        break;
+    case 2:
+        语句2;
+        break;
+    case 3:
+        语句3;
+        break;
+    case 4:
+        语句4;
+        break;
+    case 5:
+        语句5;
+        break;
+    */
+        case标签：
+            类型为char、byte、short、int的常量表达式
+            枚举常量
+            字符串字面量
+    /*
+&#125;</code></pre>
+<p>switch语句将从选项值相匹配的case标签中执行直到遇到break语句退出，或者一直执行到switch语句结束为止，如果没有符合的case，就会执行带有default的字句</p>
+<h3 id="2-8-5-终端流程语句"><a href="#2-8-5-终端流程语句" class="headerlink" title="2.8.5 终端流程语句"></a>2.8.5 终端流程语句</h3><ol>
+<li>通过break语句直接跳出语句</li>
+<li>continue语句可以跳过本次的流程，直接进入到下一次流程中</li>
+</ol>
+<h2 id="2-9-数组"><a href="#2-9-数组" class="headerlink" title="2.9 数组"></a>2.9 数组</h2><p>数组是一种数据结构，用来存储同一类型值得集合，通过一个索引下标可以访问数组中的每一个值</p>
+<h3 id="2-9-1-声明和初始化"><a href="#2-9-1-声明和初始化" class="headerlink" title="2.9.1 声明和初始化"></a>2.9.1 声明和初始化</h3><p>声明时需要指出数组类型和数组名,并使用new字符创建出数组</p>
+<pre><code>int[] a = new int[100]; //创建一个能够存储100个int类型的整型数组
+**定义出来的数组a的下标时0-99</code></pre>
+<p>创建好数组和就可以给数组进行赋值，可以使用一个循环，通过遍历每一个下标来对数组进行赋值</p>
+<pre><code>for(int i=0;i&lt;100;i++)&#123;
+    a[i]=1;  //数组a中每一位的值都初始化为1
+&#125;</code></pre>
+<p>如果想得到一个数组中的元素个数，可以通过length得到<br>    int b = a.length  //b的值位100</p>
+<p>一旦创建了数组，就不能改变它的大小，如果经常要在运行中变化数组大小，建议使用链表(Array list)，这个以后会讲到</p>
+<p>下面是一个数组声明并初始化的一个简单形式，适用于较短的数组</p>
+<pre><code>int[] a = &#123;1,2,3,3,4,5,6,6,8&#125;;  //不需要new</code></pre>
+<h3 id="2-9-2-数组的遍历"><a href="#2-9-2-数组的遍历" class="headerlink" title="2.9.2 数组的遍历"></a>2.9.2 数组的遍历</h3><pre><code>for(i=0;i&lt;a.length;i++&gt;)&#123;
+    System.out.println(a[i]);
+&#125;</code></pre>
+
       
 
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢老板，老板大气<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/assets/fukuan.jpg">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
       
     </div>
     <div class="article-info article-info-index">
@@ -226,16 +376,75 @@
 
 
       
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/09/10/giasodgo%E7%9A%84Java%E6%97%A5%E8%AE%B0%E2%80%94%E2%80%943/">展开全文 >></a>
-        </p>
-      
 
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://example.com/2020/09/10/giasodgo%E7%9A%84Java%E6%97%A5%E8%AE%B0%E2%80%94%E2%80%943/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
       
       <div class="clearfix"></div>
     </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
+  
+  
+    <a href="/2020/09/08/%E6%A8%A1%E6%8B%9F21%E7%82%B9%E6%89%91%E5%85%8B%E7%89%8C%E6%B8%B8%E6%88%8F/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">模拟21点扑克牌游戏</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
 
 <aside class="wrap-side-operation">
     <div class="mod-side-operation">
@@ -250,709 +459,35 @@
         </div>
         
         
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-模拟21点扑克牌游戏" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/09/08/%E6%A8%A1%E6%8B%9F21%E7%82%B9%E6%89%91%E5%85%8B%E7%89%8C%E6%B8%B8%E6%88%8F/">模拟21点扑克牌游戏</a>
-    </h1>
-  
-
-
-        <!--显示阅读次数-->
-        
-
-        
-        <a href="/2020/09/08/%E6%A8%A1%E6%8B%9F21%E7%82%B9%E6%89%91%E5%85%8B%E7%89%8C%E6%B8%B8%E6%88%8F/" class="archive-article-date">
-  	<time datetime="2020-09-08T09:46:49.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-09-08</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="模拟21点扑克牌游戏——分析与设计"><a href="#模拟21点扑克牌游戏——分析与设计" class="headerlink" title="模拟21点扑克牌游戏——分析与设计"></a>模拟21点扑克牌游戏——分析与设计</h1>
-        
-          <a class="article-more-a" href="/2020/09/08/%E6%A8%A1%E6%8B%9F21%E7%82%B9%E6%89%91%E5%85%8B%E7%89%8C%E6%B8%B8%E6%88%8F/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Java</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/编程设计//" class="article-tag-list-link color5">编程设计</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/09/08/%E6%A8%A1%E6%8B%9F21%E7%82%B9%E6%89%91%E5%85%8B%E7%89%8C%E6%B8%B8%E6%88%8F/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%AC%AC%E4%BA%8C%E7%AB%A0-java-%E5%9F%BA%E6%9C%AC%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E7%BB%93%E6%9E%84%EF%BC%88%E4%BA%8C%EF%BC%89"><span class="toc-number">1.</span> <span class="toc-text">第二章 java 基本程序设计结构（二）</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#2-6-%E5%AD%97%E7%AC%A6%E4%B8%B2"><span class="toc-number">1.1.</span> <span class="toc-text">2.6 字符串</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#2-6-1-%E5%AD%90%E4%B8%B2"><span class="toc-number">1.1.1.</span> <span class="toc-text">2.6.1 子串</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-6-2%E6%8B%BC%E6%8E%A5"><span class="toc-number">1.1.2.</span> <span class="toc-text">2.6.2拼接</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-6-3-%E6%A3%80%E6%B5%8B%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%98%AF%E5%90%A6%E7%AD%89%E5%90%8C"><span class="toc-number">1.1.3.</span> <span class="toc-text">2.6.3 检测字符串是否等同</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-6-4-%E7%A9%BA%E4%B8%B2%E5%92%8CNull%E4%B8%B2"><span class="toc-number">1.1.4.</span> <span class="toc-text">2.6.4 空串和Null串</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-7-%E8%BE%93%E5%85%A5%E8%BE%93%E5%87%BA"><span class="toc-number">1.2.</span> <span class="toc-text">2.7 输入输出</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#2-7-1-%E8%AF%BB%E5%8F%96%E8%BE%93%E5%85%A5"><span class="toc-number">1.2.1.</span> <span class="toc-text">2.7.1 读取输入</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-7-2-%E6%A0%BC%E5%BC%8F%E5%8C%96%E8%BE%93%E5%87%BA"><span class="toc-number">1.2.2.</span> <span class="toc-text">2.7.2 格式化输出</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-7-3-%E6%96%87%E4%BB%B6%E8%BE%93%E5%85%A5%E8%BE%93%E5%87%BA"><span class="toc-number">1.2.3.</span> <span class="toc-text">2.7.3 文件输入输出</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-8-%E6%B5%81%E7%A8%8B%E6%8E%A7%E5%88%B6"><span class="toc-number">1.3.</span> <span class="toc-text">2.8 流程控制</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#2-8-1-%E5%9D%97%E4%BD%9C%E7%94%A8%E5%9F%9F"><span class="toc-number">1.3.1.</span> <span class="toc-text">2.8.1 块作用域</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-8-2-%E6%9D%A1%E4%BB%B6%E8%AF%AD%E5%8F%A5"><span class="toc-number">1.3.2.</span> <span class="toc-text">2.8.2 条件语句</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-8-3-%E5%BE%AA%E7%8E%AF"><span class="toc-number">1.3.3.</span> <span class="toc-text">2.8.3 循环</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-8-4-%E5%A4%9A%E9%87%8D%E9%80%89%E6%8B%A9%E2%80%94%E2%80%94switch%E8%AF%AD%E5%8F%A5"><span class="toc-number">1.3.4.</span> <span class="toc-text">2.8.4 多重选择——switch语句</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-8-5-%E7%BB%88%E7%AB%AF%E6%B5%81%E7%A8%8B%E8%AF%AD%E5%8F%A5"><span class="toc-number">1.3.5.</span> <span class="toc-text">2.8.5 终端流程语句</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-9-%E6%95%B0%E7%BB%84"><span class="toc-number">1.4.</span> <span class="toc-text">2.9 数组</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#2-9-1-%E5%A3%B0%E6%98%8E%E5%92%8C%E5%88%9D%E5%A7%8B%E5%8C%96"><span class="toc-number">1.4.1.</span> <span class="toc-text">2.9.1 声明和初始化</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-9-2-%E6%95%B0%E7%BB%84%E7%9A%84%E9%81%8D%E5%8E%86"><span class="toc-number">1.4.2.</span> <span class="toc-text">2.9.2 数组的遍历</span></a></li></ol></li></ol></li></ol>
+                    </div>
+                </span>
             </div>
         </div>
         
-        
     </div>
 </aside>
 
 
 
+  
+  
+  
 
   
-    <article id="post-web学习笔记——CSS" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
+
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/09/08/web%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E2%80%94%E2%80%94CSS/">web学习笔记——CSS</a>
-    </h1>
+
   
 
 
-        <!--显示阅读次数-->
-        
-
-        
-        <a href="/2020/09/08/web%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E2%80%94%E2%80%94CSS/" class="archive-article-date">
-  	<time datetime="2020-09-08T08:56:26.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-09-08</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="web学习笔记——CSS"><a href="#web学习笔记——CSS" class="headerlink" title="web学习笔记——CSS"></a>web学习笔记——CSS</h1>
-        
-          <a class="article-more-a" href="/2020/09/08/web%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E2%80%94%E2%80%94CSS/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">web</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/CSS//" class="article-tag-list-link color4">CSS</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/09/08/web%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E2%80%94%E2%80%94CSS/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-web学习笔记——HTML" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/09/08/web%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E2%80%94%E2%80%94HTML/">web学习笔记——HTML</a>
-    </h1>
-  
-
-
-        <!--显示阅读次数-->
-        
-
-        
-        <a href="/2020/09/08/web%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E2%80%94%E2%80%94HTML/" class="archive-article-date">
-  	<time datetime="2020-09-08T08:41:27.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-09-08</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="web学习笔记——HTML"><a href="#web学习笔记——HTML" class="headerlink" title="web学习笔记——HTML"></a>web学习笔记——HTML</h1>
-        
-          <a class="article-more-a" href="/2020/09/08/web%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E2%80%94%E2%80%94HTML/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">web</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/HTML//" class="article-tag-list-link color5">HTML</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/09/08/web%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E2%80%94%E2%80%94HTML/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-Java排序算法效率比较" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/09/08/Java%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95%E6%95%88%E7%8E%87%E6%AF%94%E8%BE%83/">Java排序算法效率比较</a>
-    </h1>
-  
-
-
-        <!--显示阅读次数-->
-        
-
-        
-        <a href="/2020/09/08/Java%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95%E6%95%88%E7%8E%87%E6%AF%94%E8%BE%83/" class="archive-article-date">
-  	<time datetime="2020-09-08T08:03:51.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-09-08</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="Java常见排序算法效率比较"><a href="#Java常见排序算法效率比较" class="headerlink" title="Java常见排序算法效率比较"></a>Java常见排序算法效率比较</h1>
-        
-          <a class="article-more-a" href="/2020/09/08/Java%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95%E6%95%88%E7%8E%87%E6%AF%94%E8%BE%83/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Java</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/数据结构//" class="article-tag-list-link color5">数据结构</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/09/08/Java%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95%E6%95%88%E7%8E%87%E6%AF%94%E8%BE%83/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-Linux文件操作命令ls的C语言实现" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/09/08/Linux%E6%96%87%E4%BB%B6%E6%93%8D%E4%BD%9C%E5%91%BD%E4%BB%A4ls%E7%9A%84C%E8%AF%AD%E8%A8%80%E5%AE%9E%E7%8E%B0/">Linux文件操作命令ls的C语言实现</a>
-    </h1>
-  
-
-
-        <!--显示阅读次数-->
-        
-
-        
-        <a href="/2020/09/08/Linux%E6%96%87%E4%BB%B6%E6%93%8D%E4%BD%9C%E5%91%BD%E4%BB%A4ls%E7%9A%84C%E8%AF%AD%E8%A8%80%E5%AE%9E%E7%8E%B0/" class="archive-article-date">
-  	<time datetime="2020-09-08T02:49:25.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-09-08</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="Linux文件操作命令ls的C语言实现——Linux程序设计综合训练"><a href="#Linux文件操作命令ls的C语言实现——Linux程序设计综合训练" class="headerlink" title="Linux文件操作命令ls的C语言实现——Linux程序设计综合训练"></a>Linux文件操作命令ls的C语言实现——Linux程序设计综合训练</h1>
-        
-          <a class="article-more-a" href="/2020/09/08/Linux%E6%96%87%E4%BB%B6%E6%93%8D%E4%BD%9C%E5%91%BD%E4%BB%A4ls%E7%9A%84C%E8%AF%AD%E8%A8%80%E5%AE%9E%E7%8E%B0/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Linux</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/09/08/Linux%E6%96%87%E4%BB%B6%E6%93%8D%E4%BD%9C%E5%91%BD%E4%BB%A4ls%E7%9A%84C%E8%AF%AD%E8%A8%80%E5%AE%9E%E7%8E%B0/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-giasodgo的Java日记——2" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/08/29/giasodgo%E7%9A%84Java%E6%97%A5%E8%AE%B0%E2%80%94%E2%80%942/">giasodgo的Java日记——2</a>
-    </h1>
-  
-
-
-        <!--显示阅读次数-->
-        
-
-        
-        <a href="/2020/08/29/giasodgo%E7%9A%84Java%E6%97%A5%E8%AE%B0%E2%80%94%E2%80%942/" class="archive-article-date">
-  	<time datetime="2020-08-29T08:31:01.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-08-29</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="第二章-java-基本程序设计结构（一）"><a href="#第二章-java-基本程序设计结构（一）" class="headerlink" title="第二章 java 基本程序设计结构（一）"></a>第二章 java 基本程序设计结构（一）</h1>
-        
-          <a class="article-more-a" href="/2020/08/29/giasodgo%E7%9A%84Java%E6%97%A5%E8%AE%B0%E2%80%94%E2%80%942/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Java</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/Java日记//" class="article-tag-list-link color2">Java日记</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/08/29/giasodgo%E7%9A%84Java%E6%97%A5%E8%AE%B0%E2%80%94%E2%80%942/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-giasodgo的Java日记——1" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/08/29/giasodgo%E7%9A%84Java%E6%97%A5%E8%AE%B0%E2%80%94%E2%80%941/">giasodgo的Java日记——1</a>
-    </h1>
-  
-
-
-        <!--显示阅读次数-->
-        
-
-        
-        <a href="/2020/08/29/giasodgo%E7%9A%84Java%E6%97%A5%E8%AE%B0%E2%80%94%E2%80%941/" class="archive-article-date">
-  	<time datetime="2020-08-29T02:24:25.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-08-29</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="第一章-Java程序设计概述和编程环境的安装"><a href="#第一章-Java程序设计概述和编程环境的安装" class="headerlink" title="第一章 Java程序设计概述和编程环境的安装"></a>第一章 Java程序设计概述和编程环境的安装</h1>
-        
-          <a class="article-more-a" href="/2020/08/29/giasodgo%E7%9A%84Java%E6%97%A5%E8%AE%B0%E2%80%94%E2%80%941/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Java</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/Java日记//" class="article-tag-list-link color2">Java日记</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/08/29/giasodgo%E7%9A%84Java%E6%97%A5%E8%AE%B0%E2%80%94%E2%80%941/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-my-first-demo-blog" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/08/27/my-first-demo-blog/">my first demo blog</a>
-    </h1>
-  
-
-
-        <!--显示阅读次数-->
-        
-
-        
-        <a href="/2020/08/27/my-first-demo-blog/" class="archive-article-date">
-  	<time datetime="2020-08-27T15:09:45.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-08-27</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="我的博客文章编写"><a href="#我的博客文章编写" class="headerlink" title="我的博客文章编写"></a>我的博客文章编写</h1>
-        
-          <a class="article-more-a" href="/2020/08/27/my-first-demo-blog/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/08/27/my-first-demo-blog/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-  
 
 
           </div>
@@ -979,8 +514,8 @@
     <script>
 	var yiliaConfig = {
 		mathjax: false,
-		isHome: true,
-		isPost: false,
+		isHome: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,
