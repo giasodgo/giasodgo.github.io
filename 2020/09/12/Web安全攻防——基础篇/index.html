@@ -6,14 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://example.com">
-  <title>Archives: 2020/8 | giasodgo的博客</title>
+  <title>Web安全攻防——基础篇 | giasodgo的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="giasodgo的博客">
-<meta property="og:url" content="http://example.com/archives/2020/08/index.html">
+  <meta name="description" content="一、Web安全常见术语">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Web安全攻防——基础篇">
+<meta property="og:url" content="http://example.com/2020/09/12/Web%E5%AE%89%E5%85%A8%E6%94%BB%E9%98%B2%E2%80%94%E2%80%94%E5%9F%BA%E7%A1%80%E7%AF%87/index.html">
 <meta property="og:site_name" content="giasodgo的博客">
+<meta property="og:description" content="一、Web安全常见术语">
 <meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2020-09-12T01:21:00.000Z">
+<meta property="article:modified_time" content="2020-09-12T01:25:38.682Z">
 <meta property="article:author" content="giasodgo">
+<meta property="article:tag" content="Web">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="giasodgo的博客" type="application/atom+xml">
@@ -164,147 +169,235 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-Web安全攻防——基础篇" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2020" class="archive-year">2020</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/08/29/giasodgo%E7%9A%84Java%E6%97%A5%E8%AE%B0%E2%80%94%E2%80%942/" class="archive-article-date">
-  	<time datetime="2020-08-29T08:31:01.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-08-29</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/08/29/giasodgo%E7%9A%84Java%E6%97%A5%E8%AE%B0%E2%80%94%E2%80%942/">giasodgo的Java日记——2</a>
+    <h1 class="article-title" itemprop="name">
+      Web安全攻防——基础篇
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
+
+        <!--显示阅读次数-->
+        
+        <br/>
+        <a class="cloud-tie-join-count" href="javascript:void(0);" style="color:gray;font-size:14px;">
+        <span class="icon-sort"></span>
+        <span id="busuanzi_container_page_pv" style="color:#ef7522;font-size:14px;">
+            阅读数: <span id="busuanzi_value_page_pv"></span>次 &nbsp;&nbsp;
+        </span>
+        </a>
+        
+
+        
+        <a href="/2020/09/12/Web%E5%AE%89%E5%85%A8%E6%94%BB%E9%98%B2%E2%80%94%E2%80%94%E5%9F%BA%E7%A1%80%E7%AF%87/" class="archive-article-date">
+  	<time datetime="2020-09-12T01:21:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-09-12</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="一、Web安全常见术语"><a href="#一、Web安全常见术语" class="headerlink" title="一、Web安全常见术语"></a>一、Web安全常见术语</h1><a id="more"></a>
+<h3 id="渗透测试："><a href="#渗透测试：" class="headerlink" title="渗透测试："></a>渗透测试：</h3><p>证明网络防御按照预期计划正常运行而提供的一种机制。渗透测试是通过模拟恶意黑客的攻击方法，来评估计算机网络系统安全的一种评估方法。这个过程包括对系统的任何弱点、技术缺陷或漏洞的主动分析，这个分析是从一个攻击者可能存在的位置来进行的，并且从这个位置有条件主动利用安全漏洞。</p>
+<h3 id="网站："><a href="#网站：" class="headerlink" title="网站："></a>网站：</h3><p>指在因特网上根据一定的规则，使用HTML等根据制作的用于展示特定内容相关网页的集合。人们可以通过网站来发布自己想要公开的资讯，或者利用网站来提供相关的网络服务</p>
+<p>网站是互联网上拥有域名或地址并提供一定网络服务的主机，是存储文件的空间，以服务器为载体。人们通过浏览器进行访问、查找文件，也可以上传下载网站文件</p>
+<h3 id="静态网站："><a href="#静态网站：" class="headerlink" title="静态网站："></a>静态网站：</h3><p>易于创建的基本网站类型，不需要网络编程和数据库设计就可以创建的网站，网页以HTML语言标记编码，每页的代码都是固定的，且其中包含的信息不回更改</p>
+<h3 id="动态网站："><a href="#动态网站：" class="headerlink" title="动态网站："></a>动态网站：</h3><p>内容动态变化的动态网页的集合，可以从数据库或者内容管理系统中访问内容，所以网站内容会随着数据库更新而更新。动态网站使用客户端脚本或服务端脚本，或同时使用两者来生成动态内容。在服务端脚本编制中，软件在服务器上运行，并在服务器中完成处理，然后将页面发送给用户</p>
+<h3 id="脚本语言："><a href="#脚本语言：" class="headerlink" title="脚本语言："></a>脚本语言：</h3><p>又被称为扩建的语言或者动态语言，用来控制软件应用程序，脚本通常以文本保存，只有在调用时进行解释或翻译</p>
+<h3 id="数据库："><a href="#数据库：" class="headerlink" title="数据库："></a>数据库：</h3><p>按照数据结构来阻止存储和管理数据的仓库。</p>
+<h3 id="HTTP请求："><a href="#HTTP请求：" class="headerlink" title="HTTP请求："></a>HTTP请求：</h3><p>当浏览器向web服务器发出请求时，它向服务器传递了一个数据块，也就是请求信息，HTTP请求信息由3部分组成</p>
+<ol>
+<li>请求方法URI协议、版本</li>
+<li>请求头</li>
+<li>请求正文</li>
+</ol>
+<h3 id="HTTP请求方法："><a href="#HTTP请求方法：" class="headerlink" title="HTTP请求方法："></a>HTTP请求方法：</h3><p>对请求的URI标识的资源执行的方法</p>
+<ol>
+<li>get：要求从请求的URL获取资源POST:要求服务器接收附带的正文信息，与get请求相同，但随请求一起发送了额微信息</li>
+<li>HEAD：仅要求get返回的任何标头部分，没有正文</li>
+<li>TRACE：要求环回请求消息，已进行测试或者故障排除</li>
+<li>PUT：表示将随附的信息放在请求的URL上</li>
+<li>DELETE：表示删除请求URL处的资源</li>
+<li>OPTIONS：要求列出请求URL上的内容可以响应的HTTP方法的列表</li>
+</ol>
+<h3 id="HTML："><a href="#HTML：" class="headerlink" title="HTML："></a>HTML：</h3><p>超文本标记员，包括一系列标签，通过这些标签将网络上的文档格式统一，使分散的Internet资源连接为一个逻辑整体。HTML文本是由HTML命令组成的表述性文本，HTML命令可以说明文字、图标、动画、声音、表格、链接等</p>
+<h3 id="JavaScript："><a href="#JavaScript：" class="headerlink" title="JavaScript："></a>JavaScript：</h3><p>是一种具有函数有限的轻量级、解释型或及时编译型的编程语言，支持面向对象、命令式和声明式的风格</p>
+<h3 id="PHP："><a href="#PHP：" class="headerlink" title="PHP："></a>PHP：</h3><p>超文本预处理器，是一种开源脚本语言，PHP式1在服务器端执行的脚本语言，与c语言类似，是常用的网站编程语言。PHP独特的语法混合了C、Java、perl以及PHP自创的语法。利于学习和广泛使用，主要适用于web开发领域</p>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢老板，老板大气<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/assets/fukuan.jpg">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Java</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">Web</a>
         		</li>
       		
 		</ul>
 	</div>
 
-          
+      
 	<div class="article-category tagcloud">
 		<i class="icon-book icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="/categories/Java日记//" class="article-tag-list-link color2">Java日记</a>
+        			<a href="/categories/网络安全//" class="article-tag-list-link color5">网络安全</a>
         		</li>
       		
 		</ul>
 	</div>
 
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://example.com/2020/09/12/Web%E5%AE%89%E5%85%A8%E6%94%BB%E9%98%B2%E2%80%94%E2%80%94%E5%9F%BA%E7%A1%80%E7%AF%87/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/08/29/giasodgo%E7%9A%84Java%E6%97%A5%E8%AE%B0%E2%80%94%E2%80%941/" class="archive-article-date">
-  	<time datetime="2020-08-29T02:24:25.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-08-29</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2020/09/10/giasodgo%E7%9A%84Java%E6%97%A5%E8%AE%B0%E2%80%94%E2%80%943/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">giasodgo的Java日记——3</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/08/29/giasodgo%E7%9A%84Java%E6%97%A5%E8%AE%B0%E2%80%94%E2%80%941/">giasodgo的Java日记——1</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Java</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/Java日记//" class="article-tag-list-link color2">Java日记</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
+        
+        
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%B8%80%E3%80%81Web%E5%AE%89%E5%85%A8%E5%B8%B8%E8%A7%81%E6%9C%AF%E8%AF%AD"><span class="toc-number">1.</span> <span class="toc-text">一、Web安全常见术语</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%B8%97%E9%80%8F%E6%B5%8B%E8%AF%95%EF%BC%9A"><span class="toc-number">1.0.1.</span> <span class="toc-text">渗透测试：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BD%91%E7%AB%99%EF%BC%9A"><span class="toc-number">1.0.2.</span> <span class="toc-text">网站：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%9D%99%E6%80%81%E7%BD%91%E7%AB%99%EF%BC%9A"><span class="toc-number">1.0.3.</span> <span class="toc-text">静态网站：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8A%A8%E6%80%81%E7%BD%91%E7%AB%99%EF%BC%9A"><span class="toc-number">1.0.4.</span> <span class="toc-text">动态网站：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%84%9A%E6%9C%AC%E8%AF%AD%E8%A8%80%EF%BC%9A"><span class="toc-number">1.0.5.</span> <span class="toc-text">脚本语言：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E5%BA%93%EF%BC%9A"><span class="toc-number">1.0.6.</span> <span class="toc-text">数据库：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#HTTP%E8%AF%B7%E6%B1%82%EF%BC%9A"><span class="toc-number">1.0.7.</span> <span class="toc-text">HTTP请求：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#HTTP%E8%AF%B7%E6%B1%82%E6%96%B9%E6%B3%95%EF%BC%9A"><span class="toc-number">1.0.8.</span> <span class="toc-text">HTTP请求方法：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#HTML%EF%BC%9A"><span class="toc-number">1.0.9.</span> <span class="toc-text">HTML：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#JavaScript%EF%BC%9A"><span class="toc-number">1.0.10.</span> <span class="toc-text">JavaScript：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#PHP%EF%BC%9A"><span class="toc-number">1.0.11.</span> <span class="toc-text">PHP：</span></a></li></ol></li></ol></li></ol>
+                    </div>
+                </span>
+            </div>
         </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
+        
+    </div>
+</aside>
+
+
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/08/27/my-first-demo-blog/" class="archive-article-date">
-  	<time datetime="2020-08-27T15:09:45.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-08-27</time>
-</a>
-        </div>
-    	 
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/08/27/my-first-demo-blog/">my first demo blog</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
   
 
-    
+  
+
+  
+
+
 
 
           </div>
@@ -332,8 +425,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
